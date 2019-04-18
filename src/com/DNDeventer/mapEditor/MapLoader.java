@@ -2,17 +2,16 @@ package com.DNDeventer.mapEditor;
 
 import java.io.File;
 import java.util.Scanner;
+import java.util.Vector;
 
 import static java.lang.Boolean.*;
 
-public class MapLoader {
-    private String loadedMap[];
+public class MapLoader implements MAPSTATS{
+    private Vector<String> loadedMap;
     private File fileNameToLoad;
     private Integer numTilePacks;
-    private String tilePackLocations[];
+    private Vector<String> tilePackLocations;
     private Integer xDimension, yDimension;
-    public final Integer MAXTILEPACKS = 10;
-    public final Integer MAXMAPSIZE = 200;
     private boolean mapLoaded = FALSE;
     private ERRORSTATUS error = ERRORSTATUS.NO_ERROR;
 
@@ -33,15 +32,15 @@ public class MapLoader {
         if(fileNameToLoad.exists()) {
             try (Scanner fileScanner = new Scanner(this.fileNameToLoad)) {
                 this.numTilePacks = fileScanner.nextInt();
-                if (this.numTilePacks > MAXTILEPACKS) {
-                    this.numTilePacks = MAXTILEPACKS;
-                    this.error = ERRORSTATUS.NUMOFTILEPACKSTOOLARGE;
+                if (this.numTilePacks > MAPSTATS.MAX_TILE_PACKS) {
+                    this.numTilePacks = MAPSTATS.MAX_TILE_PACKS;
+                    this.error = ERRORSTATUS.NUM_OF_TILE_PACKS_TOO_LARGE;
                 }
 
                 fileScanner.nextLine();
-                this.tilePackLocations = new String[this.numTilePacks];
+                this.tilePackLocations = new Vector<>();
                 for (int i = 0; i < this.numTilePacks; i++) {
-                    this.tilePackLocations[i] = fileScanner.nextLine();
+                    this.tilePackLocations.add(fileScanner.nextLine());
                 }
 
                 this.xDimension = fileScanner.nextInt();
@@ -50,18 +49,18 @@ public class MapLoader {
                 fileScanner.nextLine();
 
                 Integer mapSize;
-                if (this.xDimension * this.yDimension > MAXMAPSIZE) {
-                    this.loadedMap = new String[MAXMAPSIZE];
-                    this.error = ERRORSTATUS.MAPDIMENSIONSTOOLARGE;
-                    mapSize = MAXMAPSIZE;
+                this.loadedMap = new Vector<>();
+
+                if (this.xDimension * this.yDimension > MAPSTATS.MAX_MAP_SIZE) {
+                    this.error = ERRORSTATUS.MAP_DIMENSIONS_TOO_LARGE;
+                    mapSize = MAPSTATS.MAX_MAP_SIZE;
                 }
                 else {
-                    this.loadedMap = new String[this.xDimension * this.yDimension];
                     mapSize = this.xDimension * this.yDimension;
                 }
                 Integer index = 0;
                 while (index < mapSize) {
-                    this.loadedMap[index] = fileScanner.nextLine();
+                    this.loadedMap.add(fileScanner.nextLine());
                     index++;
                 }
 
@@ -95,15 +94,16 @@ public class MapLoader {
         }
         System.out.println(this.error);
     }
-    public String[] getLoadedMap() {
+
+    public Vector<String> getLoadedMap() {
         return loadedMap;
     }
 
-    public Integer getNumTilePacks() {
+    private Integer getNumTilePacks() {
         return numTilePacks;
     }
 
-    public String[] getTilePackLocations() {
+    public Vector<String> getTilePackLocations() {
         return tilePackLocations;
     }
 

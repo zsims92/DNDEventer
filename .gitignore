@@ -1,5 +1,6 @@
-.idea/misc.xml
-.idea/modules.xml
-.idea/modules/uiDesigner.xml
-.idea/vcs.xml
-.idea/workspace.xml
+**/out
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/modules/uiDesigner.xml
+/.idea/vcs.xml
+/.idea/workspace.xml

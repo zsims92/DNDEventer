@@ -1,0 +1,9 @@
+package com.DNDeventer.mapEditor;
+
+public enum ERRORSTATUS {
+    NO_ERROR,
+    UNABLE_TO_READ_FILE,
+    INVALID_MAP_FILE,
+    MAPDIMENSIONSTOOLARGE,
+    NUMOFTILEPACKSTOOLARGE
+}

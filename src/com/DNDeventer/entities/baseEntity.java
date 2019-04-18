@@ -2,6 +2,7 @@ package com.DNDeventer.entities;
 
 public class baseEntity {
 
+    private String name = "Default";
     private Integer level = 0;
     private Integer exp = 0;
     private Double expToNextLevel = ((exp + 1) * 2.7);
@@ -51,8 +52,6 @@ public class baseEntity {
     }
 
     //Getters and Setters
-    private String name = "Default";
-
     public String getName() {
         return name;
     }
@@ -204,8 +203,5 @@ public class baseEntity {
     public void setCharisma(Integer charisma) {
         this.charisma = charisma;
     }
-
-
-
 
 }

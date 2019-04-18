@@ -6,8 +6,9 @@ import java.util.Scanner;
 
 public class MapMain {
     private MapLoader myMapLoader = new MapLoader();
-    public void run(int option) {
-        if (option == 0) {
+
+    public void run(MapEditorOptions mp) {
+        if (mp == MapEditorOptions.LOADMAP) {
             loadMapByFile();
         }
     }

@@ -6,7 +6,7 @@ public class launcher {
     public static void main(String[] args) {
 
         MapMain nMap = new MapMain();
-        MapEditorOptions option = MapEditorOptions.LOADMAP;
+        MapEditorOptions option = MapEditorOptions.LAUNCHEDITOR;
         nMap.run(option);
 
     }

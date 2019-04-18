@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f347ca54-1671-4c09-8e44-68fc9a30ada7" name="Default Changelist" comment="Changes to option checking for mapMain class&#10;                                              More small changes to the code. just refactors">
-      <change afterPath="$PROJECT_DIR$/src/com/DNDeventer/mapEditor/MAPSTATS.java" afterDir="false" />
+    <list default="true" id="f347ca54-1671-4c09-8e44-68fc9a30ada7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/DNDeventer/mapEditor/editorProgram/EditorMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/DNDeventer/mapEditor/editorProgram/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DNDEventer/com/DNDeventer/mapEditor/ERRORSTATUS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DNDEventer/com/DNDeventer/mapEditor/ERRORSTATUS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DNDEventer/com/DNDeventer/launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DNDEventer/com/DNDeventer/launcher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DNDEventer/com/DNDeventer/mapEditor/MapLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DNDEventer/com/DNDeventer/mapEditor/MapLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/DNDeventer/mapEditor/ERRORSTATUS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/DNDeventer/mapEditor/ERRORSTATUS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/DNDeventer/mapEditor/MapLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/DNDeventer/mapEditor/MapLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DNDEventer/com/DNDeventer/mapEditor/MapMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DNDEventer/com/DNDeventer/mapEditor/MapMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/DNDeventer/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/DNDeventer/launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/DNDeventer/mapEditor/MapMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/DNDeventer/mapEditor/MapMain.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,66 +27,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/DNDeventer/mapEditor/MapMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="119">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/DNDeventer/launcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#loadMapByFile#0;class#MapMain#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/DNDeventer/mapEditor/MapLoader.java">
+        <entry file="file://$PROJECT_DIR$/src/com/DNDeventer/mapEditor/editorProgram/EditorMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="121" column="8" selection-start-line="121" selection-end-line="124" />
+            <state relative-caret-position="102">
+              <caret line="6" column="80" selection-start-line="6" selection-start-column="80" selection-end-line="6" selection-end-column="80" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#MapLoader#0;class#MapLoader#0" />
-                <element signature="method#displayStats#0;class#MapLoader#0" />
-                <element signature="e#3606#3607#0" expanded="true" />
-                <element signature="e#3641#3642#0" expanded="true" />
+                <element signature="e#108#109#0" expanded="true" />
+                <element signature="e#173#174#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/DNDeventer/mapEditor/MAPSTATS.java">
+        <entry file="file://$PROJECT_DIR$/src/com/DNDeventer/mapEditor/editorProgram/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/maps/map1.def">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="7" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/DNDeventer/mapEditor/ERRORSTATUS.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+            <state>
+              <caret column="23" selection-start-column="23" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -93,9 +64,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -122,11 +93,13 @@
         <option value="$PROJECT_DIR$/data/maps/map2.def" />
         <option value="$PROJECT_DIR$/data/maps/map3.def" />
         <option value="$PROJECT_DIR$/src/com/DNDeventer/mapEditor/MapEditorOptions.java" />
-        <option value="$PROJECT_DIR$/src/com/DNDeventer/launcher.java" />
-        <option value="$PROJECT_DIR$/src/com/DNDeventer/mapEditor/MapMain.java" />
         <option value="$PROJECT_DIR$/src/com/DNDeventer/mapEditor/ERRORSTATUS.java" />
         <option value="$PROJECT_DIR$/src/com/DNDeventer/mapEditor/MAPSTATS.java" />
         <option value="$PROJECT_DIR$/src/com/DNDeventer/mapEditor/MapLoader.java" />
+        <option value="$PROJECT_DIR$/src/com/DNDeventer/launcher.java" />
+        <option value="$PROJECT_DIR$/src/com/DNDeventer/mapEditor/MapMain.java" />
+        <option value="$PROJECT_DIR$/src/com/DNDeventer/mapEditor/EditorMain.java" />
+        <option value="$PROJECT_DIR$/src/com/DNDeventer/mapEditor/editorProgram/EditorMain.java" />
       </list>
     </option>
   </component>
@@ -183,6 +156,14 @@
               <item name="DNDeventer" type="462c0819:PsiDirectoryNode" />
               <item name="mapEditor" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="DNDEventer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DNDEventer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="DNDeventer" type="462c0819:PsiDirectoryNode" />
+              <item name="mapEditor" type="462c0819:PsiDirectoryNode" />
+              <item name="editorProgram" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -191,10 +172,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build.tools" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -231,7 +212,7 @@
     </recent_temporary>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\zachs\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -262,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555557332444</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Changes to option checking for mapMain class&#10;                                              More small changes to the code. just refactors">
+      <created>1555565594240</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1555565594240</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -278,7 +266,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3281471" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3281471" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -286,7 +274,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32924962" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32924962" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.17114569" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.17114569" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -304,6 +292,20 @@
     <MESSAGE value="Changes to option checking for mapMain class&#10;More small changes to the code. just refactors" />
     <MESSAGE value="Changes to option checking for mapMain class&#10;                                              More small changes to the code. just refactors" />
     <option name="LAST_COMMIT_MESSAGE" value="Changes to option checking for mapMain class&#10;                                              More small changes to the code. just refactors" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/DNDeventer/mapEditor/MapMain.java</url>
+          <line>19</line>
+          <properties class="com.DNDeventer.mapEditor.MapMain" method="loadMapByFile">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/TileMapEditor/TileMapEditor.iml" />
@@ -329,23 +331,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/DNDeventer/mapEditor/MapEditorOptions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/DNDeventer/mapEditor/MapMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/maps/map1.def">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -360,16 +345,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/DNDeventer/launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/DNDeventer/mapEditor/MAPSTATS.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -379,7 +354,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/DNDeventer/mapEditor/MapLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
+        <state relative-caret-position="595">
           <caret line="121" column="8" selection-start-line="121" selection-end-line="124" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -387,6 +362,52 @@
             <element signature="method#displayStats#0;class#MapLoader#0" />
             <element signature="e#3606#3607#0" expanded="true" />
             <element signature="e#3641#3642#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/DNDeventer/mapEditor/MapEditorOptions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/DNDeventer/launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/DNDeventer/mapEditor/MapMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#loadMapByFile#0;class#MapMain#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/DNDeventer/mapEditor/editorProgram/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/DNDeventer/mapEditor/editorProgram/EditorMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="80" selection-start-line="6" selection-start-column="80" selection-end-line="6" selection-end-column="80" />
+          <folding>
+            <element signature="e#108#109#0" expanded="true" />
+            <element signature="e#173#174#0" expanded="true" />
           </folding>
         </state>
       </provider>

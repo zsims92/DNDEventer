@@ -1,7 +1,8 @@
 package com.DNDeventer.mapEditor;
 
+import com.DNDeventer.mapEditor.editorProgram.EditorMain;
+
 import java.io.File;
-import java.util.Map;
 import java.util.Scanner;
 
 public class MapMain {
@@ -10,6 +11,9 @@ public class MapMain {
     public void run(MapEditorOptions mp) {
         if (mp == MapEditorOptions.LOADMAP) {
             loadMapByFile();
+        }
+        else if(mp == MapEditorOptions.LAUNCHEDITOR){
+            launchEditor();
         }
     }
 
@@ -27,5 +31,8 @@ public class MapMain {
         }
 
         this.myMapLoader.displayStats();
+    }
+    private void launchEditor(){
+        EditorMain.run();
     }
 }

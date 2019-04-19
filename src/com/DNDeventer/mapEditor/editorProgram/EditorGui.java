@@ -32,7 +32,9 @@ public class EditorGui extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
+    public boolean isExited(){
+        return true;
+    }
     public void startUp(){
         launch();
     }

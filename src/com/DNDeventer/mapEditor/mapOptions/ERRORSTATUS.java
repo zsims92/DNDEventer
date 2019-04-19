@@ -1,4 +1,4 @@
-package com.DNDeventer.mapEditor;
+package com.DNDeventer.mapEditor.mapOptions;
 
 public enum ERRORSTATUS {
     NO_ERROR,

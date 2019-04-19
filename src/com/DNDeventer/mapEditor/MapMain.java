@@ -1,6 +1,8 @@
 package com.DNDeventer.mapEditor;
 
 import com.DNDeventer.mapEditor.editorProgram.EditorMain;
+import com.DNDeventer.mapEditor.mapOptions.MapEditorOptions;
+import com.DNDeventer.mapEditor.mapOptions.MapLoader;
 
 import java.io.File;
 import java.util.Scanner;

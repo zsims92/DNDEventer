@@ -1,6 +1,6 @@
 package com.DNDeventer.entities;
 
-public class baseEntity {
+public class BaseEntity {
 
     private String name = "Default";
     private Integer level = 0;
@@ -25,11 +25,11 @@ public class baseEntity {
     private Integer charisma = 0;
 
 
-    public baseEntity() {
+    public BaseEntity() {
 
     }
 
-    public baseEntity(String name, Integer level, Integer exp, Double expToNextLevel, Integer shield, Integer armor, Integer dexModifier, Integer speed, Integer armorClass, Integer health, Integer attKMax, Integer blockMax, String[] standardLanguages, Integer strength, Integer dexterity, Integer constitution, Integer intelligence, Integer wisdom, Integer charisma) {
+    public BaseEntity(String name, Integer level, Integer exp, Double expToNextLevel, Integer shield, Integer armor, Integer dexModifier, Integer speed, Integer armorClass, Integer health, Integer attKMax, Integer blockMax, String[] standardLanguages, Integer strength, Integer dexterity, Integer constitution, Integer intelligence, Integer wisdom, Integer charisma) {
         this.name = name;
         this.level = level;
         this.exp = exp;

@@ -1,4 +1,4 @@
-package com.DNDeventer.mapEditor;
+package com.DNDeventer.mapEditor.mapOptions;
 
 import java.io.File;
 import java.util.Scanner;
@@ -6,7 +6,7 @@ import java.util.Vector;
 
 import static java.lang.Boolean.*;
 
-public class MapLoader implements MAPSTATS{
+public class MapLoader implements MAPSTATS {
     private Vector<String> loadedMap;
     private File fileNameToLoad;
     private Integer numTilePacks;
@@ -15,13 +15,13 @@ public class MapLoader implements MAPSTATS{
     private boolean mapLoaded = FALSE;
     private ERRORSTATUS error = ERRORSTATUS.NO_ERROR;
 
-    MapLoader(){
+    public MapLoader(){
         this.numTilePacks = 0;
         this.xDimension = 0;
         this.yDimension = 0;
     }
 
-    MapLoader(File fileNameToLoad){
+    public MapLoader(File fileNameToLoad){
         this.fileNameToLoad = fileNameToLoad;
         this.numTilePacks = 0;
         this.xDimension = 0;

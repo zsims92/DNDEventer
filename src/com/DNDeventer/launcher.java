@@ -1,6 +1,6 @@
 package com.DNDeventer;
 import com.DNDeventer.mapEditor.MapMain;
-import com.DNDeventer.mapEditor.MapEditorOptions;
+import com.DNDeventer.mapEditor.mapOptions.MapEditorOptions;
 
 public class launcher {
     public static void main(String[] args) {

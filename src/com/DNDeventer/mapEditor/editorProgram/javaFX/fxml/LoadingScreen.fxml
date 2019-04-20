@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <bottom>
+        <VBox prefHeight="27.0" prefWidth="770.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox VBox.vgrow="ALWAYS">
+                    <children>
+                        <TextField promptText="Hostname/IP:" fx:id="serverIP" />
+                        <TextField layoutX="159.0" layoutY="10.0" prefHeight="25.0" prefWidth="126.0" promptText="Database Name:" fx:id="databaseName"/>
+                        <TextField promptText="User:" fx:id="userName"/>
+                        <TextField promptText="Password" fx:id="passWord" />
+                        <TextField prefHeight="25.0" prefWidth="61.0" promptText="Port:" fx:id="port"/>
+                        <Button mnemonicParsing="false" text="Connect" />
+                        <Button mnemonicParsing="false" text="Disconnect" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="100.0" prefWidth="200.0" />
+            </children>
+        </VBox>
+    </bottom>
+    <left>
+        <TreeView prefHeight="516.0" prefWidth="171.0" BorderPane.alignment="CENTER" />
+    </left>
+    <center>
+        <TableView BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+            </columns>
+        </TableView>
+    </center>
+    <right>
+        <ScrollBar orientation="VERTICAL" BorderPane.alignment="CENTER" />
+    </right>
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+</BorderPane>

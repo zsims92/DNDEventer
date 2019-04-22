@@ -9,6 +9,10 @@ import java.net.URL;
 
 public class FXHelper {
     public static Stage currentStage;
+    //TODO
+    //Look into setting multiple stages and keeping track of each one here. can create object with stage and ID as vars
+    //Would be able to just minimize the launcher and have the extra stages just closed by a function in here that shows
+    //the default stage, which would be the first stage added.
     public Parent loadFXML(String fileToLoad) throws IOException {
         Parent root;
         URL url = null;

@@ -170,4 +170,7 @@ public class mainDatabase {
             System.out.println("Cant load new window");
         }
     }
+
+    //TODO
+    // Need code to reset to the default launcher screen.  May not be neccessart depending on how i can set up stages
 }

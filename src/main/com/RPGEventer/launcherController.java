@@ -36,10 +36,4 @@ public class launcherController {
         MapLoad m = new MapLoad();
         m.run();
     }
-
-    @FXML
-    public void returnToLauncher() throws Exception{
-        launcher l = new launcher();
-        l.reset();
-    }
 }

@@ -1,22 +1,14 @@
-package main.com.RPGEventer.mapEditor;
-
-import main.com.RPGEventer.mapEditor.editorProgram.EditorMain;
-import main.com.RPGEventer.mapEditor.mapOptions.MapEditorOptions;
-import main.com.RPGEventer.mapEditor.mapOptions.MapLoader;
+package main.com.RPGEventer.mapEditor.mapOptions;
 
 import java.io.File;
+import java.net.URL;
 import java.util.Scanner;
 
-public class MapMain {
+public class MapLoad {
     private MapLoader myMapLoader = new MapLoader();
 
-    public void run(MapEditorOptions mp) {
-        if (mp == MapEditorOptions.LOADMAP) {
-            loadMapByFile();
-        }
-        else if(mp == MapEditorOptions.LAUNCHEDITOR){
-            launchEditor();
-        }
+    public void run() {
+        loadMapByFile();
     }
 
     private void loadMapByFile(){
@@ -24,7 +16,9 @@ public class MapMain {
         Scanner scanner = new Scanner(System.in);
         String nameOfFile = scanner.nextLine();
 
-        File FileToLoadFrom = new File(nameOfFile);
+        URL url  = getClass().getResource( "/" + nameOfFile);
+
+        File FileToLoadFrom = new File(url.getFile());
         this.myMapLoader = new MapLoader(FileToLoadFrom);
         if (this.myMapLoader.loadMap()) {
             System.out.println("Loaded from file: " + this.myMapLoader.getfileNameToLoad().getName());
@@ -33,8 +27,5 @@ public class MapMain {
         }
 
         this.myMapLoader.displayStats();
-    }
-    private void launchEditor(){
-        EditorMain.run();
     }
 }

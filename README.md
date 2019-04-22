@@ -1,5 +1,5 @@
-# DNDEventer
-DNDEventer is a program designed to offer quick pop-up events for any Role Playing games.
+# RPGEventer
+RPGEventer is a program designed to offer quick pop-up events for any Role Playing games.
 
 The goal of this project is to create a tile-based map creator that can display a set size of map (with multiple levels if needed).  This
 map will allow you to put your player characters on the screen.  The dungeon master can then place monsters, traps, puzzles that will

@@ -13,7 +13,7 @@ public class EditorGui{
         String sceneFile = "javaFX/EditorProgram/LoadingScreen.fxml";
         Parent root = AppHelper.loadFXML(sceneFile);
         Scene scene = new Scene(root);
-        FXHelper.currentStage.setTitle("Database manaFUCKBRANDO!");
+        FXHelper.currentStage.setTitle("Editor fuckBrando Program!");
         FXHelper.currentStage.setScene(scene);
         FXHelper.currentStage.show();
     }

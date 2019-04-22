@@ -11,7 +11,7 @@ public class DatabaseGui{
     FXHelper AppHelper = new FXHelper();
     DatabaseMain dmMain = new DatabaseMain();
 
-    public void startUp() throws IOException {
+    public void startUp() throws Exception {
         String sceneFile = "javaFX/Database/mainDatabase.fxml";
         Parent root = AppHelper.loadFXML(sceneFile);
         Scene scene = new Scene(root);

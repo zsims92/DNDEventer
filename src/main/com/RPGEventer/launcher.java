@@ -13,21 +13,28 @@ import main.com.RPGEventer.mapEditor.editorProgram.EditorGui;
 
 public class launcher extends Application{
     FXHelper fxHelper = new FXHelper();
+
     @Override
     public void start(Stage primaryStage)  throws Exception{
         FXHelper.currentStage = primaryStage;
         String sceneFile = "javaFX/launcher.fxml";
-        Parent temp = fxHelper.loadFXML(sceneFile);
-        Parent root = new Pane();
-//        root = fxHelper.loadFXML(sceneFile);
-
+        Parent root = fxHelper.loadFXML(sceneFile);
         Scene scene = new Scene(root);
         FXHelper.currentStage.setTitle("Fuck you Brando");
         FXHelper.currentStage.setScene(scene);
         FXHelper.currentStage.show();
     }
-    public static void main(String[] args){
-        launch(args);
+    public void reset() throws Exception{
+        String sceneFile = "javaFX/launcher.fxml";
+        Parent root = fxHelper.loadFXML(sceneFile);
+        Scene scene = new Scene(root);
+        FXHelper.currentStage.setTitle("Fuck you Brando");
+        FXHelper.currentStage.setScene(scene);
+        FXHelper.currentStage.show();
+    }
+
+    public void run(){
+        launch("");
     }
 
 }

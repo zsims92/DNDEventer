@@ -7,9 +7,10 @@
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import main.com.RPGEventer.mapEditor.editorProgram.javaFX.controllers.*?>
 
 
-<VBox id="vBoxRoot" fx:id="vBoxRoot" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:controller="main.com.RPGEventer.mapEditor.editorProgram.javaFX.controllers.LoadingScreen" id="vBoxRoot" fx:id="vBoxRoot" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label alignment="CENTER" prefHeight="102.0" prefWidth="614.0" text="RPG Eventer" textAlignment="CENTER">
          <font>

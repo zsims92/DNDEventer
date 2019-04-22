@@ -1,4 +1,4 @@
-package com.DNDeventer.mapEditor.mapOptions;
+package main.com.RPGEventer.mapEditor.mapOptions;
 
 public interface MAPSTATS {
     Integer MAX_TILE_PACKS = 10;

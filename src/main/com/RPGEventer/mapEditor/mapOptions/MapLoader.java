@@ -1,4 +1,4 @@
-package com.DNDeventer.mapEditor.mapOptions;
+package main.com.RPGEventer.mapEditor.mapOptions;
 
 import java.io.File;
 import java.util.Scanner;

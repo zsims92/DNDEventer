@@ -1,4 +1,4 @@
-package com.DNDeventer.entities;
+package main.com.RPGEventer.entities;
 
 public class BaseEntity {
 

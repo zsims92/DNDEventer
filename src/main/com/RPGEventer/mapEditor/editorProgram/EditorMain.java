@@ -1,6 +1,6 @@
-package com.DNDeventer.mapEditor.editorProgram;
+package main.com.RPGEventer.mapEditor.editorProgram;
 
-import com.DNDeventer.mapEditor.mapOptions.MAPSTATS;
+import main.com.RPGEventer.mapEditor.mapOptions.MAPSTATS;
 
 public class EditorMain implements MAPSTATS {
 

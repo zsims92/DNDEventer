@@ -1,8 +1,8 @@
-package com.DNDeventer.mapEditor;
+package main.com.RPGEventer.mapEditor;
 
-import com.DNDeventer.mapEditor.editorProgram.EditorMain;
-import com.DNDeventer.mapEditor.mapOptions.MapEditorOptions;
-import com.DNDeventer.mapEditor.mapOptions.MapLoader;
+import main.com.RPGEventer.mapEditor.editorProgram.EditorMain;
+import main.com.RPGEventer.mapEditor.mapOptions.MapEditorOptions;
+import main.com.RPGEventer.mapEditor.mapOptions.MapLoader;
 
 import java.io.File;
 import java.util.Scanner;

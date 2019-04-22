@@ -1,4 +1,4 @@
-package com.DNDeventer.mapEditor.mapOptions;
+package main.com.RPGEventer.mapEditor.mapOptions;
 
 public enum ERRORSTATUS {
     NO_ERROR,

@@ -1,4 +1,4 @@
-package com.DNDeventer.database;
+package main.com.RPGEventer.database;
 
 import java.sql.*;
 import java.util.Enumeration;

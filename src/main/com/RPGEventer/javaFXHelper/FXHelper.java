@@ -1,4 +1,4 @@
-package com.DNDeventer.javaFXHelper;
+package main.com.RPGEventer.javaFXHelper;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,7 +14,7 @@ public class FXHelper {
         URL url = null;
         try
         {
-            url  = getClass().getResource( fileToLoad );
+            url  = getClass().getResource( "/resources/" + fileToLoad );
             root = FXMLLoader.load( url );
             System.out.println( "  fxmlResource = " + fileToLoad );
         }

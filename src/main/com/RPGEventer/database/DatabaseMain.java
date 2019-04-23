@@ -5,35 +5,12 @@ import java.util.Enumeration;
 
 public class DatabaseMain {
 
-    private static String userName = "fake-1";
-    private static String passWord = "WEp4FAKE7dPf";
-    private static Integer port = 3306;
-    private static String serverIP = "mysql-fake.com";
-    private static String databaseName = "fake391-1";
-    private static String url = "jdbc:mysql://" + serverIP + ":" + port + "/" + databaseName;
-    private static Boolean debugMode = false;
-    private static Connection myConn;
-    private static Statement myStmt;
+    private Connection myConn;
+    private Statement myStmt;
 
-    // Start of Debug functions
-    private static void driverInfo(){
-        if(!debugMode) { return; }
-        getDrivers();
-        loginTimeout();
-    }
-    private static void getDrivers(){
-        Enumeration listOfDrivers = DriverManager.getDrivers();
-        System.out.println("List of Drivers: " +listOfDrivers);
-    }
-    private static void loginTimeout(){
-        Integer logTimeout = DriverManager.getLoginTimeout();
-        System.out.println("You need to wait: " + logTimeout + " before accessing this database.");
-    } //END OF DEBUG FUNCTIONS
-
-
-
-    public static void initConnection() throws SQLException{
+    public void initConnection(String serverIP, String databaseName, String userName, String passWord, String port){
         try{
+            String url = "jdbc:mysql://" + serverIP + ":" + port + "/" + databaseName;
             do {
                 // 1. Get a connection to database
                 myConn = DriverManager.getConnection(url, userName, passWord);
@@ -41,56 +18,71 @@ public class DatabaseMain {
                 myStmt = myConn.createStatement();
             } while (myStmt.isClosed());
 
-            driverInfo();
-            //TODO: Make some logical setup to invoke insertData(), updateData(), deleteData() here
-
-
-
         }catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    public void closeConnection() {
+        try{
+            if(!myStmt.isClosed()) {
+                myStmt.close();
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
-    public static void insertData(String table_name, String[] columns, String[] values) throws SQLException{
+
+    public void readData(String sql){
+        try{
+            ResultSet rs = myStmt.executeQuery(sql);
+            ResultSetMetaData rsmd = rs.getMetaData();
+            int columnsNumber = rsmd.getColumnCount();
+            while (rs.next()) {
+                for (int i = 1; i <= columnsNumber; i++){
+                    if ( i > 1) System.out.print(", ");
+                    String columnValue = rs.getString(i);
+                    System.out.println(columnValue + " " + rsmd.getColumnName(i));
+                }
+            }
+        } catch (Exception e){
+            System.out.println("Failed to read data!");
+        }
+    }
+
+
+    public void insertData(String table_name, String columns[], String values[]) {
         try{
             // 3. Execute SQL query
-            String sql = "INSERT INTO " + table_name;
-            String concatVals = "";
-            String concatCols = "";
-
-            for (Integer i = 0; i < columns.length; i++){
-
-                for ( Integer j = 0; j < values.length; j++) {
-
-                    concatVals += values[i] + ", ";
-                }
-                concatCols += columns[i] + ", ";
-            }
-            sql += " values (" + concatCols + ")";
-            sql += " (" + concatVals + ")";
+            String sql = "INSERT INTO " + table_name
+                    + " (" + columns + ")"
+                    + " VALUES (" + values + ")";
 
             myStmt.executeUpdate(sql);
             System.out.println("Insert complete.");
+            readData(sql);
 
         }catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void deleteData(String table_name, String condition) throws SQLException{
+    public void deleteData(String table_name, String col1val1) {
         try{
             // 3. Execute SQL query
             String sql = "DELETE FROM " + table_name
-                    + " WHERE " + condition;
+                    + " WHERE " + col1val1;
             //Valid condition is something like:  CustomerName='Alfonso'
-            if(condition.equals("")){
+            if(col1val1.equals("")){
                 sql = "DELETE FROM " + table_name;
                 myStmt.executeUpdate(sql);
-                System.out.println("Insert complete.");
+                System.out.println("Delete complete.");
+                readData(sql);
             } else {
                 myStmt.executeUpdate(sql);
-                System.out.println("Insert complete.");
+                System.out.println("Delete complete.");
+                readData(sql);
             }
 
         }catch (Exception e) {
@@ -98,18 +90,19 @@ public class DatabaseMain {
         }
     }
 
-    public static void updateData(String table_name, String conditionValue, String conditionLocation) throws SQLException{
+    public void updateData(String table_name, String col1val1, String col2val2) {
         try{
             // 3. Execute SQL query
             String sql = "UPDATE " + table_name
-                    + " SET " + conditionValue
-                    + " WHERE " + conditionLocation;
+                    + " SET " + col1val1
+                    + " WHERE " + col2val2;
 
-            if(conditionValue.equals("") || conditionLocation.equals("")){
+            if(col1val1.equals("") || col2val2.equals("")){
                 System.out.println("Please enter a valid value!");
             } else {
                 myStmt.executeUpdate(sql);
-                System.out.println("Insert complete.");
+                System.out.println("Update complete.");
+                readData(sql);
             }
 
         }catch (Exception e) {
@@ -117,8 +110,13 @@ public class DatabaseMain {
         }
     }
 
+    //Debug Functions
+    public Enumeration listOfDrivers(){
+        return DriverManager.getDrivers();
+    }
 
-
-
+    public Integer logTimeOut() {
+        return DriverManager.getLoginTimeout();
+    }
 
 }

@@ -8,31 +8,31 @@ import main.com.RPGEventer.mapEditor.mapOptions.MapLoad;
 public class launcherController {
     @FXML
     public void loadMapEditor(){
-        System.out.println("Fuck you brando, you probably think youre soooo cool");
+        System.out.println("I love brando, I know he is soooo cool");
         EditorGui gui = new EditorGui();
         try {
             gui.startUp();
         }
         catch (Exception e){
-            System.out.println("Weell, fuck. my editor gui sucks and failed to load");
+            System.out.println("Weell, fuck. My name is sims and my editor gui sucks and failed to load");
         }
     }
 
     @FXML
     public void loadDatabase(){
-        System.out.println("yeh. Fuck you brando you bitch. Im loading the database gui");
+        System.out.println("REEEE; MY DATABASE NOW BRANDO CAUSE IM A BITCH.");
         DatabaseGui gui = new DatabaseGui();
         try {
             gui.startUp();
         }
         catch (Exception e){
-            System.out.println("Weell, your database gui sucks and failed to load");
+            System.out.println("Damn. This DB GUI is too sexy to load...");
         }
     }
 
     @FXML
     public void loadMapLoad(){
-        System.out.println("Fuck you brando, cuz you aint cool, soz. this thing doesnt do much yet so LEAVE IT ALONE");
+        System.out.println("I name my functions loadMapLoad cause im a derpPersonDerp()");
         MapLoad m = new MapLoad();
         m.run();
     }

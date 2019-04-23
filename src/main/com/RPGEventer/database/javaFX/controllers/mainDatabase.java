@@ -85,28 +85,22 @@ public class mainDatabase {
 
     @FXML
     public void onClickConnect(){
-        String ip;
-        String name;
-        String pass;
-        String dbName;
-        String portNumber;
 
         if(serverIP.getText().equals("") || userName.getText().equals("") || databaseName.getText().equals("")) {
             System.out.println("Please check hostname/database name/username");
 
         }else {
-            ip = serverIP.getText();
-            name = userName.getText();
-            dbName = databaseName.getText();
-            pass = passWord.getText();
+            String ip = serverIP.getText();
+            String name = userName.getText();
+            String dbName = databaseName.getText();
+            String pass = passWord.getText();
+            String portNumber = port.getText();
 
-            if (port.getText().equals("")){
+            if (port.getText().equals("")) {
                 portNumber = "3306";
-            } else {
-                portNumber = port.getText();
             }
 
-            //dbMain.initConnection(ip, dbName, name, pass, portNumber);
+            dbMain.initConnection(ip, dbName, name, pass, portNumber);
         }
     }
 
@@ -186,6 +180,4 @@ public class mainDatabase {
         launcher.manager.removeStage("Database");
     }
 
-    //TODO
-    // Need code to reset to the default launcher screen.  May not be neccessart depending on how i can set up stages
 }

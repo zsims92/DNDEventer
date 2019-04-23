@@ -6,6 +6,7 @@ import javafx.scene.*;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import main.com.RPGEventer.launcher;
 
 public class mainDatabase {
     private DatabaseMain dbMain = new DatabaseMain();
@@ -38,6 +39,7 @@ public class mainDatabase {
     public TextField del_tableName;
     public TextField del_col1val1;
 
+    @FXML
     public void onClickUpdate() throws Exception {
         if(update_tableName.getText().equals("") ||
                 update_col1val1.getText().equals("") ||
@@ -68,6 +70,7 @@ public class mainDatabase {
         dbMain.insertData(tableName, columns, values);
     }
 
+    @FXML
     public void onClickDelete() throws Exception{
         if(del_tableName.getText().equals("") || del_col1val1.getText().equals("") ) {
             System.out.println("Please enter valid tables, columns, values");
@@ -80,6 +83,7 @@ public class mainDatabase {
 
     }
 
+    @FXML
     public void onClickConnect(){
         String ip;
         String name;
@@ -111,6 +115,7 @@ public class mainDatabase {
         // dbMain.closeConnection();
     }
 
+    @FXML
     public void openMenuInsert(){
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("insert.fxml"));
@@ -126,6 +131,7 @@ public class mainDatabase {
         }
     }
 
+    @FXML
     public void openMenuDelete(){
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("delete.fxml"));
@@ -141,6 +147,7 @@ public class mainDatabase {
         }
     }
 
+    @FXML
     public void openMenuUpdate(){
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("update.fxml"));
@@ -156,6 +163,7 @@ public class mainDatabase {
         }
     }
 
+    @FXML
     public void openMenuDebug(){
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("debug.fxml"));
@@ -169,6 +177,13 @@ public class mainDatabase {
         }catch (Exception e) {
             System.out.println("Cant load new window");
         }
+    }
+
+    @FXML
+    public void closeDatabaseGUI(){
+        launcher.manager.setStage("Launcher");
+        launcher.manager.setScene("Launcher", "Launcher");
+        launcher.manager.removeStage("Database");
     }
 
     //TODO

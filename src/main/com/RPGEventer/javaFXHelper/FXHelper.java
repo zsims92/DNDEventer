@@ -6,9 +6,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Vector;
 
 public class FXHelper {
     public static Stage currentStage;
+
+
     //TODO
     //Look into setting multiple stages and keeping track of each one here. can create object with stage and ID as vars
     //Would be able to just minimize the launcher and have the extra stages just closed by a function in here that shows

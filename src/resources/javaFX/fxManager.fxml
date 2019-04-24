@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<TitledPane collapsible="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" text="JavaFX Manager" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.com.RPGEventer.javaFXManager.javaFX.controllers.fxManagerController">
+   <content>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="344.0" prefWidth="174.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="169.0" text="Choose Stage To Load" />
+                  <VBox fx:id="stageLoaderButtons" prefHeight="328.0" prefWidth="174.0" />
+               </children>
+               <HBox.margin>
+                  <Insets bottom="30.0" top="30.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="344.0" prefWidth="222.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="247.0" text="List of Stages in program" />
+                  <Label fx:id="stageListArea" prefHeight="302.0" prefWidth="86.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="344.0" prefWidth="143.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="232.0" text="List of Scenes in program" />
+                  <Label fx:id="sceneListArea" prefHeight="303.0" prefWidth="149.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </content>
+</TitledPane>

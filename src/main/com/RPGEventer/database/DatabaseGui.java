@@ -3,23 +3,23 @@ package main.com.RPGEventer.database;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import main.com.RPGEventer.javaFXHelper.FXHelper;
-import main.com.RPGEventer.launcher;
-
-import java.io.IOException;
+import javafx.stage.WindowEvent;
+import static main.com.RPGEventer.launcher.manager;
 
 
 public class DatabaseGui{
-    DatabaseMain dmMain = new DatabaseMain();
+    public static final String DATABASESTAGEID = "Database";
+    public final String SCENE_FILE = "javaFX/Database/mainDatabase.fxml";
+    public static final String DATABASESCENEID = "DatabaseMain";
 
-    public void startUp() throws Exception {
-        String sceneFile = "javaFX/Database/mainDatabase.fxml";
-        Parent root = launcher.manager.loadFXML(sceneFile);
+    public void startUp(){
+        Parent root = manager.loadFXML(SCENE_FILE);
         Scene scene = new Scene(root);
-        Stage editorStage = new Stage();
-        launcher.manager.addStage(editorStage, "Database");
-        launcher.manager.addScene("Database", scene, "databaseMain");
-        launcher.manager.setStage("Database");
-        launcher.manager.setScene("Database", "databaseMain");
+        Stage databaseStage = new Stage();
+        databaseStage.setOnCloseRequest((WindowEvent event1) -> {
+            manager.removeStage(DATABASESTAGEID);
+        });
+        manager.addStage(databaseStage, DATABASESTAGEID, true);
+        manager.addScene(DATABASESTAGEID, scene, DATABASESCENEID, true);
     }
 }

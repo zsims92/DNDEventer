@@ -175,7 +175,7 @@ public class mainDatabase {
 
     @FXML
     public void closeDatabaseGUI(){
-        launcher.manager.setStage("Launcher");
+        launcher.manager.setStage("Launcher", true);
         launcher.manager.setScene("Launcher", "Launcher");
         launcher.manager.removeStage("Database");
     }

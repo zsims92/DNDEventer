@@ -1,4 +1,4 @@
-package main.com.RPGEventer.mapEditor.mapOptions;
+package main.com.RPGEventer.RPGEditor.mapOptions;
 
 public interface MAPSTATS {
     Integer MAX_TILE_PACKS = 10;

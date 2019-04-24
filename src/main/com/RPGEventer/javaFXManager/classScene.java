@@ -1,4 +1,4 @@
-package main.com.RPGEventer.javaFXHelper;
+package main.com.RPGEventer.javaFXManager;
 
 import javafx.scene.Scene;
 

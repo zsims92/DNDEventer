@@ -14,19 +14,19 @@ import static main.com.RPGEventer.launcher.manager;
 
 public class RPGEditorGui {
 
-    public static final String EDITORSTAGEID = "Editor";
-    public final String SCENE_FILE = "javaFX/EditorProgram/rpgEditorMain.fxml";
-    public static final String EDITORSCENEID = "EditorMain";
+    private static final String EDITORSTAGEID = "Editor";
+    private final String SCENE_FILE = "javaFX/EditorProgram/rpgEditorMain.fxml";
+    private static final String EDITORSCENEID = "EditorMain";
 
     public void startUp(){
         Parent root = launcher.manager.loadFXML(SCENE_FILE);
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        Scene scene = new Scene(root, screenSize.getWidth(), screenSize.getHeight() -80);
+        Scene scene = new Scene(root, screenSize.getWidth(), screenSize.getHeight() -81);
 
         Stage editorStage = new Stage();
-        editorStage.setOnCloseRequest((WindowEvent event1) -> {
-            manager.removeStage(EDITORSTAGEID);
-        });
+        editorStage.setOnCloseRequest((event1) ->
+            manager.removeStage(EDITORSTAGEID)
+        );
         launcher.manager.addStage(editorStage, EDITORSTAGEID, true);
         launcher.manager.addScene(EDITORSTAGEID, scene, EDITORSCENEID, true);
     }

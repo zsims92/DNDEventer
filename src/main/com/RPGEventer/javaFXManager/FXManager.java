@@ -3,10 +3,11 @@ package main.com.RPGEventer.javaFXManager;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.awt.*;
 import java.net.URL;
 import java.util.Vector;
 
@@ -21,9 +22,13 @@ public class FXManager{
     public FXManager(Stage primaryStage, boolean showManager){
         Stages = new Vector<>();
         this.fxManagerStage = new classStage(primaryStage, "fxManager");
+        this.fxManagerStage.getBaseStage().setIconified(true);
         String sceneFile = "javaFX/fxManager.fxml";
         Parent root = loadFXML(sceneFile);
-        Scene scene = new Scene(root);
+
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        Scene scene = new Scene(root, screenSize.getWidth(), screenSize.getHeight()-80);
+
         this.fxManagerStage.getBaseStage().setScene(scene);
         if(showManager) {
             this.fxManagerStage.getBaseStage().show();

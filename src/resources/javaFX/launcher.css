@@ -1,0 +1,46 @@
+.split-pane {
+    -fx-background-insets: 0, 0;
+    -fx-padding: 0;
+    -fx-border: 0, 0;
+}
+
+.split-pane *.split-pane-divider {
+     -fx-padding: 0;
+}
+
+#mainTitle{
+    -fx-text-fill: "blue";
+}
+
+.paneWithText{
+    -fx-background-image: url("../images/mapGridOutlineBG.png");
+    -fx-background-position: center center;
+    -fx-background-size: auto;
+}
+#createEventPane{
+    -fx-background-image: url("../images/createEvenBG.png");
+    -fx-background-position: center center;
+    -fx-background-size: stretch;
+}
+
+#openEditorPane{
+    -fx-background-image: url("../images/openEditorBG.png");
+    -fx-background-position: center center;
+    -fx-background-size: stretch;
+}
+
+#playEventPane{
+    -fx-background-image: url("../images/playEventBG.png");
+    -fx-background-position: center center;
+    -fx-background-size: stretch;
+}
+
+#browseEventPane{
+    -fx-background-image: url("../images/browseEventBG.png");
+    -fx-background-position: center center;
+    -fx-background-size: stretch;
+}
+
+.button{
+
+}

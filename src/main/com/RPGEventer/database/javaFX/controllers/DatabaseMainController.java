@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import main.com.RPGEventer.launcher;
 
-public class mainDatabase {
+public class DatabaseMainController {
     private DatabaseMain dbMain = new DatabaseMain();
 
     //Main window buttons

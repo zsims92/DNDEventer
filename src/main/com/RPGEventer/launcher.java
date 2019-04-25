@@ -7,6 +7,8 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import main.com.RPGEventer.javaFXManager.FXManager;
 
+import java.awt.*;
+
 
 public class launcher extends Application{
     public static FXManager manager;
@@ -19,7 +21,9 @@ public class launcher extends Application{
         manager = new FXManager(primaryStage, true);
         Stage launcher = new Stage();
         Parent root = manager.loadFXML(SCENE_FILE);
-        Scene launcherScene = new Scene(root);
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        Scene launcherScene  = new Scene(root, screenSize.getWidth(), screenSize.getHeight()-80);
+
         manager.addStage(launcher, LAUNCHERSTAGEID, true);
         manager.addScene(LAUNCHERSTAGEID, launcherScene, LAUNCHERSCENEID, true);
     }

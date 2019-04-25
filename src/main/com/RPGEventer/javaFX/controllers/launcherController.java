@@ -1,33 +1,54 @@
 package main.com.RPGEventer.javaFX.controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import main.com.RPGEventer.database.DatabaseGui;
-import main.com.RPGEventer.launcher;
+import javafx.scene.control.Label;
+import main.com.RPGEventer.RPGEditor.RPGEditorGui;
 
 public class launcherController {
-    @FXML
-    public void closeAction(){
-      
-    }
-    @FXML
-    public void playEventClicked(){
 
-    }
     @FXML
-    public void newEventClicked(){
+    private Label editorText;
 
-    }
     @FXML
-    public void downloadEventClicked(){
+    private Label PlayText;
 
-    }
     @FXML
-    public void rpgEditorButtonClicked(){
+    private Label browseText;
 
-    }
     @FXML
-    public void databaseOpen(){
-        DatabaseGui db = new DatabaseGui();
-        db.startUp();
+    private Label createText;
+
+    @FXML
+    public void initialize(){
+        editorText.setText("Features:\n" +
+                "Create new maps, monsters, player characters and more!\n" +
+                "Fully integrated with assets you can download\n" +
+                "Easy set up process helps you become an editor pro!\n");
+
+        PlayText.setText("Features:\n" +
+                "Load custom events or select from defaults\n" +
+                "Events can have multiple maps with live tiles\n" +
+                "Can be paused and resumed whenever\n" +
+                "Import and then export player characters after event is done\n");
+        browseText.setText("Features:\n" +
+                "Load custom events or select from defaults\n" +
+                "Events can have multiple maps with live tiles\n" +
+                "Can be paused and resumed whenever\n" +
+                "Import and then export player characters after event is done\n");
+
+        createText.setText("Features:\n" +
+                "Load custom events or select from defaults\n" +
+                "Events can have multiple maps with live tiles\n" +
+                "Can be paused and resumed whenever\n" +
+                "Import and then export player characters after event is done\n");
     }
+
+
+    @FXML
+    void openEditorMain(ActionEvent event) {
+        RPGEditorGui ed = new RPGEditorGui();
+        ed.startUp();
+    }
+
 }

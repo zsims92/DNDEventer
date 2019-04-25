@@ -1,55 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.*?>
 <?import java.lang.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import java.net.URL?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.com.RPGEventer.javaFX.controllers.launcherController">
-   <children>
-      <VBox alignment="CENTER" layoutY="-1.0" prefHeight="400.0" prefWidth="600.0">
-         <children>
-            <Pane prefHeight="200.0" prefWidth="200.0">
+<AnchorPane minHeight="480.0" minWidth="720.0" prefHeight="780.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.com.RPGEventer.javaFX.controllers.launcherController">
+    <stylesheets>
+        <URL value="@launcher.css" />
+    </stylesheets>
+    <children>
+      <Pane prefHeight="780.0" prefWidth="1024.0" styleClass="paneWithText" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <SplitPane dividerPositions="0.33, 0.8" orientation="VERTICAL" prefHeight="780.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="600.0">
-                    <menus>
-                      <Menu mnemonicParsing="false" text="File">
-                        <items>
-                          <MenuItem mnemonicParsing="false" onAction="#closeAction" text="Close" />
-                              <MenuItem mnemonicParsing="false" onAction="#databaseOpen" text="Database" />
-                        </items>
-                      </Menu>
-                    </menus>
-                  </MenuBar>
-                  <Text fill="#d30606" layoutX="3.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RPG Eventer" textAlignment="CENTER" underline="true" wrappingWidth="593.6708984375">
+                  <Pane prefHeight="257.0" prefWidth="1024.0" styleClass="paneWithText" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Label id="mainTitle" alignment="CENTER" layoutX="495.0" layoutY="116.0" prefHeight="253.0" prefWidth="1024.0" stylesheets="@launcher.css" text="RPG Eventer" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <font>
-                        <Font name="Constantia" size="96.0" />
+                        <Font name="System Bold" size="160.0" />
                      </font>
-                  </Text>
+                  </Label>
                </children>
-            </Pane>
-            <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+            </AnchorPane>
+          <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#playEventClicked" prefHeight="31.0" prefWidth="113.0" scaleX="1.5" scaleY="1.5" text="Play Event" HBox.hgrow="ALWAYS">
-                     <HBox.margin>
-                        <Insets bottom="38.0" left="38.0" right="38.0" top="38.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#newEventClicked" prefHeight="31.0" prefWidth="119.0" scaleX="1.5" scaleY="1.5" text="New Event" HBox.hgrow="ALWAYS">
-                     <HBox.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#downloadEventClicked" prefHeight="31.0" prefWidth="163.0" scaleX="1.5" scaleY="1.5" text="Download Event" HBox.hgrow="ALWAYS">
-                     <HBox.margin>
-                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
-                     </HBox.margin>
-                  </Button>
+                  <SplitPane dividerPositions="0.33, 0.66" layoutX="278.0" layoutY="44.0" prefHeight="248.0" prefWidth="1022.0" styleClass="paneWithText" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <SplitPane dividerPositions="0.25" layoutX="78.0" layoutY="69.0" orientation="VERTICAL" prefHeight="359.0" prefWidth="335.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" styleClass="makeTransparent">
+                                       <children>
+                                          <Button layoutX="123.0" layoutY="28.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="333.0" text="Play Event" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Pane id="playEventPane" layoutX="87.0" layoutY="61.0" prefHeight="275.0" prefWidth="338.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label fx:id="PlayText" layoutY="4.0" text="Label" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <SplitPane dividerPositions="0.25" orientation="VERTICAL" prefHeight="359.0" prefWidth="332.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Button layoutX="-16.0" layoutY="56.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="333.0" text="Create Event" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Pane id="createEventPane" layoutX="69.0" layoutY="22.0" prefHeight="275.0" prefWidth="338.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                          <Label fx:id="createText" alignment="TOP_LEFT" prefHeight="275.0" prefWidth="338.0" text="Label" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <SplitPane dividerPositions="0.25" orientation="VERTICAL" prefHeight="359.0" prefWidth="345.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Button layoutX="102.0" layoutY="28.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="333.0" text="Browse Events" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Pane id="browseEventPane" prefHeight="275.0" prefWidth="348.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                          <Label fx:id="browseText" alignment="TOP_LEFT" prefHeight="275.0" prefWidth="338.0" text="Label" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
                </children>
-            </HBox>
-            <Button alignment="CENTER" mnemonicParsing="false" onAction="#rpgEditorButtonClicked" prefHeight="31.0" prefWidth="668.0" text="RPG Editor" />
-         </children>
-      </VBox>
+            </AnchorPane>
+            <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.25" layoutX="402.0" layoutY="-2.0" prefHeight="156.0" prefWidth="1022.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Button layoutX="104.0" layoutY="61.0" mnemonicParsing="false" onAction="#openEditorMain" prefHeight="152.0" prefWidth="253.0" text="RPG Editor" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Pane id="openEditorPane" layoutX="263.0" layoutY="-22.0" prefHeight="156.0" prefWidth="768.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <Label fx:id="editorText" prefHeight="156.0" prefWidth="768.0" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
    </children>
 </AnchorPane>

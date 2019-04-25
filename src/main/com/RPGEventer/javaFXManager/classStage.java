@@ -18,9 +18,9 @@ public class classStage {
         return classID;
     }
 
-    private Stage baseStage;
-    private Vector<classScene> baseStageScenes;
-    private String classID;
+    private final Stage baseStage;
+    private final Vector<classScene> baseStageScenes;
+    private final String classID;
 
     public classStage(Stage stage, String classID){
         this.baseStage = stage;

@@ -10,7 +10,7 @@ import java.awt.*;
 import static main.com.RPGEventer.launcher.manager;
 
 
-public class DatabaseGui{
+class DatabaseGui{
     public static final String DATABASESTAGEID = "Database";
     public final String SCENE_FILE = "javaFX/Database/databaseMain.fxml";
     public static final String DATABASESCENEID = "DatabaseMain";
@@ -21,9 +21,7 @@ public class DatabaseGui{
         Scene scene = new Scene(root, screenSize.getWidth(), screenSize.getHeight());
 
         Stage databaseStage = new Stage();
-        databaseStage.setOnCloseRequest((WindowEvent event1) -> {
-            manager.removeStage(DATABASESTAGEID);
-        });
+        databaseStage.setOnCloseRequest((WindowEvent event1) -> manager.removeStage(DATABASESTAGEID));
         manager.addStage(databaseStage, DATABASESTAGEID, true);
         manager.addScene(DATABASESTAGEID, scene, DATABASESCENEID, true);
     }

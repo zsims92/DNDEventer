@@ -5,7 +5,6 @@ import java.util.Enumeration;
 
 public class DatabaseMain {
 
-    private Connection myConn;
     private Statement myStmt;
 
     public void initConnection(String serverIP, String databaseName, String userName, String passWord, String port){
@@ -13,7 +12,7 @@ public class DatabaseMain {
             String url = "jdbc:mysql://" + serverIP + ":" + port + "/" + databaseName;
             do {
                 // 1. Get a connection to database
-                myConn = DriverManager.getConnection(url, userName, passWord);
+                Connection myConn = DriverManager.getConnection(url, userName, passWord);
                 // 2. Create a statement
                 myStmt = myConn.createStatement();
             } while (myStmt.isClosed());
@@ -34,7 +33,7 @@ public class DatabaseMain {
     }
 
 
-    public void readData(String sql){
+    private void readData(String sql){
         try{
             ResultSet rs = myStmt.executeQuery(sql);
             ResultSetMetaData rsmd = rs.getMetaData();
@@ -52,12 +51,12 @@ public class DatabaseMain {
     }
 
 
-    public void insertData(String table_name, String columns[], String values[]) {
+    public void insertData(String table_name, String[] columns, String[] values) {
         try{
             // 3. Execute SQL query
             String sql = "INSERT INTO " + table_name
-                    + " (" + columns + ")"
-                    + " VALUES (" + values + ")";
+                    + " (" + columns[0] + ")"
+                    + " VALUES (" + values[0] + ")";
 
             myStmt.executeUpdate(sql);
             System.out.println("Insert complete.");

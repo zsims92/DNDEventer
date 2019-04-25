@@ -1,15 +1,19 @@
 package main.com.RPGEventer.database.javaFX.controllers;
 
-import main.com.RPGEventer.database.*;
-import javafx.fxml.*;
-import javafx.scene.*;
-import javafx.scene.control.*;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import main.com.RPGEventer.database.DatabaseMain;
 import main.com.RPGEventer.launcher;
 
 public class DatabaseMainController {
-    private DatabaseMain dbMain = new DatabaseMain();
+    private final DatabaseMain dbMain = new DatabaseMain();
 
     //Main window buttons
     public Button connectBtn;
@@ -26,21 +30,21 @@ public class DatabaseMainController {
     public PasswordField passWord;
 
     //Insert Menu Items
-    public TextField insert_tableName;
-    public TextField insert_columns;
-    public TextField insert_values;
+    private TextField insert_tableName;
+    private TextField insert_columns;
+    private TextField insert_values;
 
     //Update Menu Items
-    public TextField update_tableName;
-    public TextField update_col1val1;
-    public TextField update_col2val2;
+    private TextField update_tableName;
+    private TextField update_col1val1;
+    private TextField update_col2val2;
 
     //Delete Menu Items
-    public TextField del_tableName;
-    public TextField del_col1val1;
+    private TextField del_tableName;
+    private TextField del_col1val1;
 
     @FXML
-    public void onClickUpdate() throws Exception {
+    public void onClickUpdate() {
         if(update_tableName.getText().equals("") ||
                 update_col1val1.getText().equals("") ||
                 update_col2val2.getText().equals("")){
@@ -55,7 +59,7 @@ public class DatabaseMainController {
     }
 
     @FXML
-    public void onClickInsert() throws Exception{
+    public void onClickInsert(){
 
         if(insert_tableName.getText().equals("") ||
                 insert_columns.getText().equals("") ||
@@ -64,14 +68,14 @@ public class DatabaseMainController {
         }
 
         String tableName = insert_tableName.getText();
-        String columns[] = { insert_columns.getText()};
-        String values[] = {insert_values.getText()};
+        String[] columns = {insert_columns.getText()};
+        String[] values = {insert_values.getText()};
 
         dbMain.insertData(tableName, columns, values);
     }
 
     @FXML
-    public void onClickDelete() throws Exception{
+    public void onClickDelete(){
         if(del_tableName.getText().equals("") || del_col1val1.getText().equals("") ) {
             System.out.println("Please enter valid tables, columns, values");
         }

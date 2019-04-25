@@ -1,157 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.layout.*?>
-
-<AnchorPane minHeight="480.0" minWidth="720.0" prefHeight="780.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.com.RPGEventer.RPGEditor.javaFX.controllers.rpgEditorMainController">
-   <children>
-      <SplitPane dividerPositions="0.25, 0.6" orientation="VERTICAL" prefHeight="1080.0" prefWidth="1939.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-               <children>
-                  <Pane prefHeight="266.0" prefWidth="1937.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                  <Label alignment="CENTER" prefHeight="266.0" prefWidth="1937.0" text="RPG Editor" textAlignment="CENTER" textFill="#e40b0b" underline="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <font>
-                        <Font name="Constantia" size="150.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-               <children>
-                  <SplitPane dividerPositions="0.25" layoutX="411.0" layoutY="111.0" prefHeight="381.0" prefWidth="1022.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <items>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                           <children>
-                              <SplitPane dividerPositions="0.5" layoutX="46.0" layoutY="77.0" orientation="VERTICAL" prefHeight="379.0" prefWidth="251.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                <items>
-                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                                       <children>
-                                          <Button layoutX="28.0" layoutY="36.0" mnemonicParsing="false" prefHeight="126.0" prefWidth="249.0" text="New Map" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                       </children>
-                                    </AnchorPane>
-                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                                       <children>
-                                          <Button layoutX="50.0" layoutY="29.0" mnemonicParsing="false" prefHeight="126.0" prefWidth="249.0" text="Load Map" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                       </children>
-                                    </AnchorPane>
-                                </items>
-                              </SplitPane>
-                           </children>
+<?import javafx.scene.text.Font?>
+<AnchorPane minHeight="480.0" minWidth="720.0" prefHeight="780.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="main.com.RPGEventer.RPGEditor.javaFX.controllers.rpgEditorMainController">
+    <SplitPane dividerPositions="0.25, 0.6" orientation="VERTICAL" prefHeight="1080.0" prefWidth="1939.0"
+               AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+               AnchorPane.topAnchor="0.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <Pane prefHeight="266.0" prefWidth="1937.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                  AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+            <Label alignment="CENTER" prefHeight="266.0" prefWidth="1937.0" text="RPG Editor" textAlignment="CENTER"
+                   textFill="#e40b0b" underline="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <font>
+                    <Font name="Constantia" size="150.0"/>
+                </font>
+            </Label>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <SplitPane dividerPositions="0.25" layoutX="411.0" layoutY="111.0" prefHeight="381.0"
+                       prefWidth="1022.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                       AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <SplitPane dividerPositions="0.5" layoutX="46.0" layoutY="77.0" orientation="VERTICAL"
+                               prefHeight="379.0" prefWidth="251.0" AnchorPane.bottomAnchor="0.0"
+                               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                               AnchorPane.topAnchor="0.0">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                            <Button layoutX="28.0" layoutY="36.0" mnemonicParsing="false" prefHeight="126.0"
+                                    prefWidth="249.0" text="New Map" AnchorPane.bottomAnchor="0.0"
+                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                    AnchorPane.topAnchor="0.0"/>
                         </AnchorPane>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                           <children>
-                              <Label alignment="CENTER" layoutX="363.0" layoutY="121.0" prefHeight="262.0" prefWidth="761.0" text="This is a buncj of text.  its gonna display the features of the map editor. blfbThis is a buncj of text.  its gonna display the features of the map editor. blfbDPFThis is a buncj of text.  its gonna display the features of the map editor. blfbDPFThis is a buncj of text.  its gonna display the features of the map editor. blfbDPFDPF" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                           </children>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                            <Button layoutX="50.0" layoutY="29.0" mnemonicParsing="false" prefHeight="126.0"
+                                    prefWidth="249.0" text="Load Map" AnchorPane.bottomAnchor="0.0"
+                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                    AnchorPane.topAnchor="0.0"/>
                         </AnchorPane>
-                    </items>
-                  </SplitPane>
-               </children>
-            </AnchorPane>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0">
-               <children>
-                  <SplitPane dividerPositions="0.25, 0.5, 0.75" layoutX="353.0" layoutY="57.0" prefHeight="307.0" prefWidth="1022.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <items>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                           <children>
-                              <SplitPane dividerPositions="0.25, 0.5" layoutX="46.0" layoutY="53.0" orientation="VERTICAL" prefHeight="305.0" prefWidth="251.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                <items>
-                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                                       <children>
-                                          <Button layoutX="79.0" layoutY="21.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="247.0" text="New Tile" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                       </children>
-                                    </AnchorPane>
-                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                                       <children>
-                                          <Button layoutX="79.0" layoutY="19.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="247.0" text="Load Tile" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                       </children>
-                                    </AnchorPane>
-                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                                       <children>
-                                          <Label alignment="CENTER" layoutX="85.0" layoutY="63.0" prefHeight="147.0" prefWidth="247.0" text="Tile Creator" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                       </children>
-                                    </AnchorPane>
-                                </items>
-                              </SplitPane>
-                           </children>
+                    </SplitPane>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <Label alignment="CENTER" layoutX="363.0" layoutY="121.0" prefHeight="262.0"
+                           prefWidth="761.0"
+                           text="This is a buncj of text.  its gonna display the features of the map editor. blfbThis is a buncj of text.  its gonna display the features of the map editor. blfbDPFThis is a buncj of text.  its gonna display the features of the map editor. blfbDPFThis is a buncj of text.  its gonna display the features of the map editor. blfbDPFDPF"
+                           textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="0.0"
+                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                </AnchorPane>
+            </SplitPane>
+        </AnchorPane>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <SplitPane dividerPositions="0.25, 0.5, 0.75" layoutX="353.0" layoutY="57.0" prefHeight="307.0"
+                       prefWidth="1022.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                       AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <SplitPane dividerPositions="0.25, 0.5" layoutX="46.0" layoutY="53.0"
+                               orientation="VERTICAL" prefHeight="305.0" prefWidth="251.0"
+                               AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                            <Button layoutX="79.0" layoutY="21.0" mnemonicParsing="false" prefHeight="72.0"
+                                    prefWidth="247.0" text="New Tile" AnchorPane.bottomAnchor="0.0"
+                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                    AnchorPane.topAnchor="0.0"/>
                         </AnchorPane>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                           <children>
-                              <SplitPane dividerPositions="0.25, 0.5" orientation="VERTICAL" prefHeight="305.0" prefWidth="247.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <items>
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                                       <children>
-                                          <Button layoutX="42.0" layoutY="21.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="249.0" text="New Player Character" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                       </children>
-                                    </AnchorPane>
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                                       <children>
-                                          <Button layoutX="42.0" layoutY="19.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="249.0" text="Load Player Character" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                       </children>
-                                    </AnchorPane>
-                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                                       <children>
-                                          <Label alignment="CENTER" layoutX="44.0" layoutY="63.0" prefHeight="147.0" prefWidth="249.0" text="Player Character Creator" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                       </children>
-                                    </AnchorPane>
-                                 </items>
-                              </SplitPane>
-                           </children>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                            <Button layoutX="79.0" layoutY="19.0" mnemonicParsing="false" prefHeight="68.0"
+                                    prefWidth="247.0" text="Load Tile" AnchorPane.bottomAnchor="0.0"
+                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                    AnchorPane.topAnchor="0.0"/>
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <SplitPane dividerPositions="0.25, 0.5" orientation="VERTICAL" prefHeight="305.0" prefWidth="251.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <items>
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                                       <children>
-                                          <Button layoutX="66.0" layoutY="21.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="249.0" text="New Monster" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                       </children>
-                                    </AnchorPane>
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                                       <children>
-                                          <Button layoutX="66.0" layoutY="19.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="249.0" text="Load Monster" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                       </children>
-                                    </AnchorPane>
-                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                                       <children>
-                                          <Label alignment="CENTER" layoutX="70.0" layoutY="63.0" prefHeight="147.0" prefWidth="249.0" text="Monster Creator" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                       </children>
-                                    </AnchorPane>
-                                 </items>
-                              </SplitPane>
-                           </children>
+                            <Label alignment="CENTER" layoutX="85.0" layoutY="63.0" prefHeight="147.0"
+                                   prefWidth="247.0" text="Tile Creator" textAlignment="CENTER"
+                                   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                        </AnchorPane>
+                    </SplitPane>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <SplitPane dividerPositions="0.25, 0.5" orientation="VERTICAL" prefHeight="305.0"
+                               prefWidth="247.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                            <Button layoutX="42.0" layoutY="21.0" mnemonicParsing="false" prefHeight="72.0"
+                                    prefWidth="249.0" text="New Player Character"
+                                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                            <Button layoutX="42.0" layoutY="19.0" mnemonicParsing="false" prefHeight="68.0"
+                                    prefWidth="249.0" text="Load Player Character"
+                                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <SplitPane dividerPositions="0.25, 0.5" orientation="VERTICAL" prefHeight="305.0" prefWidth="251.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <items>
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                                       <children>
-                                          <Button layoutX="80.0" layoutY="21.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="249.0" text="New Item" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                       </children>
-                                    </AnchorPane>
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                                       <children>
-                                          <Button layoutX="80.0" layoutY="19.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="249.0" text="Load Item" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                       </children>
-                                    </AnchorPane>
-                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                                       <children>
-                                          <Label alignment="CENTER" layoutX="83.0" layoutY="63.0" prefHeight="147.0" prefWidth="249.0" text="Item Creator" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                       </children>
-                                    </AnchorPane>
-                                 </items>
-                              </SplitPane>
-                           </children>
+                            <Label alignment="CENTER" layoutX="44.0" layoutY="63.0" prefHeight="147.0"
+                                   prefWidth="249.0" text="Player Character Creator" textAlignment="CENTER"
+                                   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
                         </AnchorPane>
-                    </items>
-                  </SplitPane>
-               </children>
-            </AnchorPane>
-        </items>
-      </SplitPane>
-   </children>
+                    </SplitPane>
+                </AnchorPane>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                    <SplitPane dividerPositions="0.25, 0.5" orientation="VERTICAL" prefHeight="305.0"
+                               prefWidth="251.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                            <Button layoutX="66.0" layoutY="21.0" mnemonicParsing="false" prefHeight="72.0"
+                                    prefWidth="249.0" text="New Monster" AnchorPane.bottomAnchor="0.0"
+                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                    AnchorPane.topAnchor="0.0"/>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                            <Button layoutX="66.0" layoutY="19.0" mnemonicParsing="false" prefHeight="68.0"
+                                    prefWidth="249.0" text="Load Monster" AnchorPane.bottomAnchor="0.0"
+                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                    AnchorPane.topAnchor="0.0"/>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <Label alignment="CENTER" layoutX="70.0" layoutY="63.0" prefHeight="147.0"
+                                   prefWidth="249.0" text="Monster Creator" textAlignment="CENTER"
+                                   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                        </AnchorPane>
+                    </SplitPane>
+                </AnchorPane>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                    <SplitPane dividerPositions="0.25, 0.5" orientation="VERTICAL" prefHeight="305.0"
+                               prefWidth="251.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                            <Button layoutX="80.0" layoutY="21.0" mnemonicParsing="false" prefHeight="72.0"
+                                    prefWidth="249.0" text="New Item" AnchorPane.bottomAnchor="0.0"
+                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                    AnchorPane.topAnchor="0.0"/>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                            <Button layoutX="80.0" layoutY="19.0" mnemonicParsing="false" prefHeight="68.0"
+                                    prefWidth="249.0" text="Load Item" AnchorPane.bottomAnchor="0.0"
+                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                    AnchorPane.topAnchor="0.0"/>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <Label alignment="CENTER" layoutX="83.0" layoutY="63.0" prefHeight="147.0"
+                                   prefWidth="249.0" text="Item Creator" textAlignment="CENTER"
+                                   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                        </AnchorPane>
+                    </SplitPane>
+                </AnchorPane>
+            </SplitPane>
+        </AnchorPane>
+    </SplitPane>
 </AnchorPane>

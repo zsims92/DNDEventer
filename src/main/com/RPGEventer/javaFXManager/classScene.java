@@ -11,8 +11,8 @@ public class classScene {
         return sceneID;
     }
 
-    private Scene scene;
-    private String sceneID;
+    private final Scene scene;
+    private final String sceneID;
 
     public classScene(Scene scene, String sceneID){
         this.scene = scene;

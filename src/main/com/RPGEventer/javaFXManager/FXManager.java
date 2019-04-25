@@ -3,7 +3,6 @@ package main.com.RPGEventer.javaFXManager;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -16,8 +15,9 @@ public class FXManager{
         return Stages;
     }
 
-    private Vector<classStage> Stages;
-    private classStage fxManagerStage;
+    private final Vector<classStage> Stages;
+    private final classStage fxManagerStage;
+    private final boolean showManager;
 
     public FXManager(Stage primaryStage, boolean showManager){
         Stages = new Vector<>();
@@ -26,13 +26,12 @@ public class FXManager{
         String sceneFile = "javaFX/fxManager.fxml";
         Parent root = loadFXML(sceneFile);
 
+        this.showManager = showManager;
+
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         Scene scene = new Scene(root, screenSize.getWidth(), screenSize.getHeight()-80);
 
         this.fxManagerStage.getBaseStage().setScene(scene);
-        if(showManager) {
-            this.fxManagerStage.getBaseStage().show();
-        }
     }
 
     public void addStage(Stage stageToAdd, String stageID, boolean show){
@@ -66,6 +65,29 @@ public class FXManager{
         }
     }
 
+    public Vector<classStage> getStagesShown(){
+        Vector<classStage> shownStages = new Vector<>();
+        for(classStage cStage: Stages){
+            if(cStage.getBaseStage().isShowing()){
+                shownStages.add(cStage);
+            }
+        }
+        return shownStages;
+    }
+
+    public classScene getSceneShown(String stageID){
+        for(classStage cStage: Stages){
+            if(cStage.getClassID().equals(stageID)){
+                for(classScene cScene: cStage.getBaseStageScenes()){
+                    if(cScene.getScene().getRoot().isVisible()){
+                        return cScene;
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
     public void setStage(String stageID, boolean closeOthers){
         for(classStage cStage: Stages) {
             if (cStage.getClassID().equals(stageID)) {
@@ -90,6 +112,9 @@ public class FXManager{
                     }
                 }
             }
+        }
+        if(this.showManager && !this.fxManagerStage.getBaseStage().isShowing()){
+            this.fxManagerStage.getBaseStage().show();
         }
     }
 

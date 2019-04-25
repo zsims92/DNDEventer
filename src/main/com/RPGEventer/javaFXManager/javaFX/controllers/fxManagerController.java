@@ -3,14 +3,10 @@ package main.com.RPGEventer.javaFXManager.javaFX.controllers;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 import main.com.RPGEventer.javaFXManager.classScene;
@@ -29,16 +25,11 @@ public class fxManagerController {
 
     @FXML
     public void initialize(){
-        Timeline updatefxManager = new Timeline(new KeyFrame(Duration.seconds(1.0), new EventHandler<ActionEvent>() {
-
-            @Override
-            public void handle(ActionEvent event) {
+        Timeline updatefxManager = new Timeline(new KeyFrame(Duration.seconds(1.0), (event)-> {
                 updateSceneList();
                 updateStageList();
                 updateStageLoader();
-
-            }
-        }));
+            }));
         updatefxManager.setCycleCount(Timeline.INDEFINITE);
         updatefxManager.play();
     }
@@ -47,10 +38,10 @@ public class fxManagerController {
         Vector<classStage> stages = launcher.manager.getStages();
         String stageToDisplay= "";
 
-        Integer index = 0;
+        int index = 0;
         for(classStage cStage: stages){
             index++;
-            stageToDisplay = stageToDisplay.concat(index.toString() + ":\t" + cStage.getClassID() + "\n");
+            stageToDisplay = stageToDisplay.concat(index + ":\t" + cStage.getClassID() + "\n");
         }
         stageListArea.setText(stageToDisplay);
     }
@@ -61,19 +52,18 @@ public class fxManagerController {
             boolean needToAdd = true;
             for(Node p: stageLoaderButtons.getChildren()){
                 Button temp = (Button) p;
-                if(temp.getText() == cStage.getClassID()){
+                if(temp.getText().equals(cStage.getClassID())){
                     needToAdd = false;
                 }
             }
             if(needToAdd){
                 Button stage = new Button(cStage.getClassID());
-                stage.setOnAction((event) -> {
-                            launcher.manager.setStage(stage.getText(), false);
-                        }
+                stage.setOnAction((event) ->
+                            launcher.manager.setStage(stage.getText(), false)
                 );
-                Platform.runLater(() ->{
-                    stageLoaderButtons.getChildren().add(stage);
-                });
+                Platform.runLater(() ->
+                    stageLoaderButtons.getChildren().add(stage)
+                );
             }
         }
             if(stageLoaderButtons.getChildren().size() != stages.size()){
@@ -81,14 +71,14 @@ public class fxManagerController {
                     Button temp = (Button) p;
                     boolean keep = false;
                     for (classStage cStage: stages) {
-                        if (temp.getText() == cStage.getClassID()) {
+                        if (temp.getText().equals(cStage.getClassID())) {
                             keep = true;
                         }
                     }
                     if(!keep){
-                        Platform.runLater(() ->{
-                            stageLoaderButtons.getChildren().remove(temp);
-                        });
+                        Platform.runLater(() ->
+                            stageLoaderButtons.getChildren().remove(temp)
+                        );
                     }
                 }
             }

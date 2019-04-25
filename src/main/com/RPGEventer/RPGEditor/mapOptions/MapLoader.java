@@ -1,12 +1,13 @@
 package main.com.RPGEventer.RPGEditor.mapOptions;
 
 import java.io.File;
+import java.net.URL;
 import java.util.Scanner;
 import java.util.Vector;
 
-import static java.lang.Boolean.*;
+import static java.lang.Boolean.FALSE;
 
-public class MapLoader implements MAPSTATS {
+class MapLoader implements MAPSTATS {
     private Vector<String> loadedMap;
     private File fileNameToLoad;
     private Integer numTilePacks;
@@ -28,7 +29,24 @@ public class MapLoader implements MAPSTATS {
         this.yDimension = 0;
     }
 
-    public boolean loadMap(){
+    public boolean loadMapbyFile(String MapToLoad){
+        String nameOfFile = "/resources/" + MapToLoad;
+        URL url  = getClass().getResource( "/" + nameOfFile);
+
+        this.fileNameToLoad = new File(url.getFile());
+        boolean status = false;
+        if (loadMap()) {
+            System.out.println("Loaded from file: " + getfileNameToLoad().getName());
+            status = true;
+        } else {
+            System.out.println("Unable to load from file: " + getfileNameToLoad().getName());
+        }
+
+        displayStats();
+        return status;
+    }
+
+    private boolean loadMap(){
         if(fileNameToLoad.exists()) {
             try (Scanner fileScanner = new Scanner(this.fileNameToLoad)) {
                 this.numTilePacks = fileScanner.nextInt();
@@ -75,7 +93,7 @@ public class MapLoader implements MAPSTATS {
         return this.mapLoaded;
     }
 
-    public void displayStats(){
+    private void displayStats(){
         if(this.mapLoaded) {
             System.out.println("The number of tile packs being used is: " + this.getNumTilePacks());
             System.out.println("The tile packs being used are: ");
@@ -119,7 +137,7 @@ public class MapLoader implements MAPSTATS {
         return mapLoaded;
     }
 
-    public File getfileNameToLoad() {
+    private File getfileNameToLoad() {
         return fileNameToLoad;
     }
 }

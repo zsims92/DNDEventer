@@ -27,11 +27,11 @@ public abstract class baseCharacter implements inventoriable, displayable, inter
     @Override
     public Node nodeToDisplay() {
         AnchorPane n = new AnchorPane();
+
         //Will add more specific stuff to display here.
         //This can be specified to be specific events if we want.  This will record anything that happens inside the N when its displayed
-        n.addEventHandler(Event.ANY, (event -> {
-            handleCharEvent(event);
-        }));
+        n.addEventHandler(Event.ANY, (event)->
+                this.handleCharEvent(event));
         return n;
     }
 

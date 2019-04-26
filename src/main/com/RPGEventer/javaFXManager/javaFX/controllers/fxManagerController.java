@@ -11,7 +11,7 @@ import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 import main.com.RPGEventer.javaFXManager.classScene;
 import main.com.RPGEventer.javaFXManager.classStage;
-import main.com.RPGEventer.launcher;
+import main.com.RPGEventer.launcher.launcher;
 
 import java.util.Vector;
 

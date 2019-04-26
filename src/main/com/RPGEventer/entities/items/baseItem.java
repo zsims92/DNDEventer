@@ -2,14 +2,25 @@ package main.com.RPGEventer.entities.items;
 
 import javafx.scene.Node;
 import main.com.RPGEventer.entities.character.baseCharacter;
-import main.com.RPGEventer.entities.character.interactionInterface;
-import main.com.RPGEventer.entities.character.inventory.inventoryInterface;
-import main.com.RPGEventer.javaFXManager.fxNodeInterface;
+import main.com.RPGEventer.entities.maps.baseMap;
+import main.com.RPGEventer.interfaces.interactable;
+import main.com.RPGEventer.interfaces.inventoriable;
+import main.com.RPGEventer.interfaces.displayable;
 
-public class baseItem implements inventoryInterface, fxNodeInterface, interactionInterface {
+public class baseItem implements inventoriable, displayable, interactable {
     @Override
-    public Node displayNode() {
+    public Node nodeToDisplay() {
         return null;
+    }
+
+    @Override
+    public void removeFromScene() {
+
+    }
+
+    @Override
+    public void update() {
+
     }
 
     @Override
@@ -28,12 +39,22 @@ public class baseItem implements inventoryInterface, fxNodeInterface, interactio
     }
 
     @Override
-    public boolean addStatusEffect(String effect, baseCharacter characterToFuckUpOrHealWhatever) {
+    public boolean interact(baseCharacter char1, baseCharacter char2) {
         return false;
     }
 
     @Override
-    public String getStatusEffect() {
-        return "deal damage";
+    public boolean interact(baseCharacter char1, baseItem item) {
+        return false;
+    }
+
+    @Override
+    public boolean interact(baseItem item, baseMap map) {
+        return false;
+    }
+
+    @Override
+    public boolean interact(baseCharacter char1, baseMap map) {
+        return false;
     }
 }

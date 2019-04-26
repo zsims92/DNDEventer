@@ -1,8 +1,8 @@
 package main.com.RPGEventer.interfaces;
 
-import main.com.RPGEventer.entities.maps.baseMap;
 import main.com.RPGEventer.entities.character.baseCharacter;
 import main.com.RPGEventer.entities.items.baseItem;
+import main.com.RPGEventer.entities.maps.baseMap;
 
 public interface interactable {
     boolean interact(baseCharacter char1, baseCharacter char2);

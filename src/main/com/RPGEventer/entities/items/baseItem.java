@@ -3,9 +3,9 @@ package main.com.RPGEventer.entities.items;
 import javafx.scene.Node;
 import main.com.RPGEventer.entities.character.baseCharacter;
 import main.com.RPGEventer.entities.maps.baseMap;
+import main.com.RPGEventer.interfaces.displayable;
 import main.com.RPGEventer.interfaces.interactable;
 import main.com.RPGEventer.interfaces.inventoriable;
-import main.com.RPGEventer.interfaces.displayable;
 
 public class baseItem implements inventoriable, displayable, interactable {
     @Override

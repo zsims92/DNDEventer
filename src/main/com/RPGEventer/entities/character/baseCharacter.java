@@ -1,29 +1,40 @@
 package main.com.RPGEventer.entities.character;
 
+import javafx.event.Event;
 import javafx.scene.Node;
+import javafx.scene.layout.AnchorPane;
 import main.com.RPGEventer.entities.character.inventory.inventory;
 import main.com.RPGEventer.entities.character.properties.attributes;
 import main.com.RPGEventer.entities.character.properties.stats;
-import main.com.RPGEventer.entities.status.statusEffect;
-import main.com.RPGEventer.interfaces.inventoriable;
 import main.com.RPGEventer.entities.items.baseItem;
 import main.com.RPGEventer.entities.maps.baseMap;
+import main.com.RPGEventer.entities.status.statusEffect;
 import main.com.RPGEventer.interfaces.displayable;
 import main.com.RPGEventer.interfaces.interactable;
+import main.com.RPGEventer.interfaces.inventoriable;
 
+import java.awt.event.ActionListener;
 import java.util.Vector;
 
-public abstract class baseCharacter implements inventoriable, displayable, interactable {
+public abstract class baseCharacter implements inventoriable, displayable, interactable{
     //Vars
     public inventory charInventory;
     public stats charStats;
     public attributes charAttributes;
     public Vector<statusEffect> charEffects;
+    public ActionListener listener;
 
     @Override
     public Node nodeToDisplay() {
-        return null;
+        AnchorPane n = new AnchorPane();
+        //Will add more specific stuff to display here.
+        //This can be specified to be specific events if we want.  This will record anything that happens inside the N when its displayed
+        n.addEventHandler(Event.ANY, (event -> {
+            handleCharEvent(event);
+        }));
+        return n;
     }
+
     //Overrides
     @Override
     public boolean addItemToInventory(baseItem itemToAdd, baseCharacter characterToAddItemTo) {
@@ -70,6 +81,11 @@ public abstract class baseCharacter implements inventoriable, displayable, inter
     }
 
     //Methods
+    public void handleCharEvent(Event event){
+        System.out.println(event.getEventType().getName() + " " + event.toString());
+    }
+
+    //Getters and Setters
     public inventory getInventory() {
         return charInventory;
     }

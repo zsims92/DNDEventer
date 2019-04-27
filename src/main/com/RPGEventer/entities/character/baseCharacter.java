@@ -61,6 +61,12 @@ public abstract class baseCharacter implements inventoriable, displayable, inter
     }
 
     @Override
+    public void update() {
+
+    }
+
+
+    @Override
     public boolean interact(baseItem item, baseMap map) {
         return false;
     }

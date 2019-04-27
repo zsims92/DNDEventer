@@ -28,7 +28,6 @@ public class inventory implements displayable {
                 inventoryDisplay.addColumn(1);
                 inventoryDisplay.addRow(0);
                 inventoryDisplay.addRow(1);
-
                 root.getChildren().add(inventoryDisplay);
                 return root;
         }

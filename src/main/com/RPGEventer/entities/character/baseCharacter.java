@@ -42,6 +42,7 @@ public abstract class baseCharacter implements inventoriable, displayable, inter
         //I can override those differences.  Like and nonPlayerCharacter should never add items to their inventory, idt
         //Its a pretty simple fix otherwise, all I have to do is remove that override and use this one ofc
 
+
         return false;
     }
 

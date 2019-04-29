@@ -4,11 +4,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.awt.*;
 import java.net.URL;
 import java.util.Vector;
+import java.util.logging.Level;
+
+import static main.com.RPGEventer.launcher.Main.LOGGER;
 
 public class fxManager {
     public Vector<classStage> getStages() {
@@ -22,7 +26,6 @@ public class fxManager {
     public fxManager(Stage primaryStage, boolean showManager){
         Stages = new Vector<>();
         this.fxManagerStage = new classStage(primaryStage, "fxManager");
-        this.fxManagerStage.getBaseStage().setIconified(true);
         String sceneFile = "javaFX/fxManager.fxml";
         Parent root = loadFXML(sceneFile);
 
@@ -32,9 +35,10 @@ public class fxManager {
         Scene scene = new Scene(root, screenSize.getWidth(), screenSize.getHeight()-80);
 
         this.fxManagerStage.getBaseStage().setScene(scene);
+        LOGGER.info("The JavaFX Manger is running");
     }
 
-    public void addStage(Stage stageToAdd, String stageID, boolean show){
+    public void addStage(Stage stageToAdd, String stageID, boolean show, boolean closeOthers){
         for(classStage cStage: Stages){
             if(cStage.getClassID().equals(stageID)) {
                 System.out.println("Already have that stage");
@@ -43,7 +47,7 @@ public class fxManager {
         }
         classStage newStage = new classStage(stageToAdd, stageID);
         if(show){
-            setStage(stageID, false);
+            setStage(stageID, closeOthers);
         }
         Stages.add(newStage);
     }
@@ -75,6 +79,7 @@ public class fxManager {
         return shownStages;
     }
 
+
     public classScene getSceneShown(String stageID){
         for(classStage cStage: Stages){
             if(cStage.getClassID().equals(stageID)){
@@ -92,6 +97,10 @@ public class fxManager {
         for(classStage cStage: Stages) {
             if (cStage.getClassID().equals(stageID)) {
                 cStage.getBaseStage().show();
+                cStage.getBaseStage().setScene(cStage.getBaseStageScenes().get(0).getScene());
+                cStage.getBaseStage().setAlwaysOnTop(true);
+                cStage.getBaseStage().setAlwaysOnTop(false);
+                this.fxManagerStage.getBaseStage().hide();
             } else {
                 if (closeOthers) {
                     cStage.getBaseStage().close();
@@ -118,6 +127,14 @@ public class fxManager {
         }
     }
 
+    public void showOrHideManager(boolean show){
+        if(show) {
+            this.fxManagerStage.getBaseStage().show();
+        } else{
+            this.fxManagerStage.getBaseStage().hide();
+        }
+    }
+
     public void removeStage(String stageID){
         for(classStage cs: Stages){
             if(cs.getClassID().equals(stageID)){
@@ -136,16 +153,11 @@ public class fxManager {
         {
             url  = getClass().getResource( "/resources/" + fileToLoad );
             root = FXMLLoader.load( url );
-            System.out.println( "  fxmlResource = " + fileToLoad );
         }
         catch ( Exception ex )
         {
-            System.out.println( "Exception on FXMLLoader.load()" );
-            System.out.println( "  * url: " + url );
-            System.out.println( "  * " + ex );
-            System.out.println( "    ----------------------------------------\n" );
+            LOGGER.log(Level.SEVERE, "This file: /resources/" + fileToLoad + " threw an error:\n", ex);
         }
-
         return root;
     }
 }

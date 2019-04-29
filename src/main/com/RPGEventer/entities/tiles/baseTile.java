@@ -1,15 +1,19 @@
 package main.com.RPGEventer.entities.tiles;
 
+import javafx.event.Event;
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import main.com.RPGEventer.interfaces.displayable;
+
+import java.awt.event.ActionEvent;
 
 public class baseTile implements displayable{
     @Override
     public void update() {
 
     }
+
 
     @Override
     public Node nodeToDisplay() {

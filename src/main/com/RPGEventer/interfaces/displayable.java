@@ -6,5 +6,4 @@ public interface displayable {
     Node nodeToDisplay();
     void removeFromScene();
     void update();
-
 }

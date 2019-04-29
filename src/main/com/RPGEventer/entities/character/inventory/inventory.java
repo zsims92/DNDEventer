@@ -1,11 +1,13 @@
 package main.com.RPGEventer.entities.character.inventory;
 
+import javafx.event.Event;
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import main.com.RPGEventer.entities.items.baseItem;
 import main.com.RPGEventer.interfaces.displayable;
 
+import java.awt.event.ActionEvent;
 import java.util.Vector;
 
 public class inventory implements displayable {

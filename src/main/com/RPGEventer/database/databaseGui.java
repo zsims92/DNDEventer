@@ -1,28 +1,17 @@
 package main.com.RPGEventer.database;
+import main.com.RPGEventer.javaFXManager.Static2DStage;
 
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import javafx.stage.WindowEvent;
+import java.util.Vector;
 
-import java.awt.*;
+import static main.com.RPGEventer.launcher.Main.textBundle;
 
-import static main.com.RPGEventer.launcher.launcher.manager;
-
-
-class databaseGui {
-    public static final String DATABASESTAGEID = "Database";
-    public final String SCENE_FILE = "javaFX/databse/databaseMain.fxml";
-    public static final String DATABASESCENEID = "databaseMain";
-
-    public void startUp(){
-        Parent root = manager.loadFXML(SCENE_FILE);
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        Scene scene = new Scene(root, screenSize.getWidth(), screenSize.getHeight());
-
-        Stage databaseStage = new Stage();
-        databaseStage.setOnCloseRequest((WindowEvent event1) -> manager.removeStage(DATABASESTAGEID));
-        manager.addStage(databaseStage, DATABASESTAGEID, true);
-        manager.addScene(DATABASESTAGEID, scene, DATABASESCENEID, true);
+class databaseGui extends Static2DStage {
+    public databaseGui(){
+        this.numScenes = 1;
+        this.STAGE_ID = textBundle.getString("DATABASE_STAGE_ID");
+        this.SCENE_FILES = new Vector<>(numScenes+1);
+        this.SCENE_IDS = new Vector<>(numScenes+1);
+        this.SCENE_FILES.add(textBundle.getString("DATABASE_SCENE_FILE"));
+        this.SCENE_IDS.add(textBundle.getString("DATABASE_SCENE_ID"));
     }
 }

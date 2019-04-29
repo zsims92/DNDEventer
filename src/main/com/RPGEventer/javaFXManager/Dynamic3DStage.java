@@ -25,7 +25,7 @@ public class Dynamic3DStage extends Stage{
             scenes = new Vector<>(this.numScenes);
         }
         this.setOnCloseRequest((event1) -> {
-            //manager.removeStage(STAGE_ID);
+            manager.removeStage(STAGE_ID);
             manager.showOrHideManager(true);
         });
 

@@ -1,14 +1,11 @@
 package main.com.RPGEventer.event.runEvent.display;
 
-import javafx.event.EventType;
+import com.interactivemesh.jfx.importer.stl.StlMeshImporter;
 import javafx.scene.*;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.shape.Box;
+import javafx.scene.paint.Color;
 import javafx.scene.transform.Rotate;
 import javafx.scene.transform.Translate;
 import main.com.RPGEventer.entities.maps.baseMap;
@@ -26,43 +23,36 @@ public class mainDisplay extends Dynamic3DStage {
         this.STAGE_ID = textBundle.getString("MAIN_DISPLAY_STAGE_ID");
         this.SCENE_IDS = new Vector<>(numScenes+1);
         this.SCENE_IDS.add(textBundle.getString("MAIN_DISPLAY_SCENE_ID"));
-        this.camera = new PerspectiveCamera();
 
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-
-        AnchorPane pane = new AnchorPane();
         baseMap map =  new baseMap();
         Node n = map.getMyNode();
-        pane.getChildren().add(n);
-        AnchorPane.setRightAnchor(n, 0.0);
-        AnchorPane.setLeftAnchor(n, 0.0);
-        AnchorPane.setBottomAnchor(n, 0.0);
-        AnchorPane.setTopAnchor(n, 0.0);
-        pane.getTransforms().add(new Rotate(90, Rotate.Y_AXIS));
 
-        Camera camera = new PerspectiveCamera();
-        camera.getTransforms().addAll (
-                new Rotate(90, Rotate.Y_AXIS),
-                new Translate(0, 0, -5000));
+        this.camera = new PerspectiveCamera(true);
+        camera.translateZProperty().set(-500);
+        camera.setNearClip(1);
+        camera.setFarClip(1000);
 
         Group cameraGroup = new Group();
         cameraGroup.getChildren().add(camera);
-        cameraGroup.getChildren().add(pane);
+        cameraGroup.getChildren().add(n);
         SubScene subScene = new SubScene(cameraGroup, screenSize.getWidth(), screenSize.getHeight()-80);
         subScene.setCamera(camera);
 
         Group temp = new Group();
         temp.getChildren().add(subScene);
         this.addEventHandler(KeyEvent.KEY_PRESSED, (event -> {
-           switch(event.getText()){
-               case "w": camera.getTransforms().add(new Translate(0,10,0)); break;
-               case "a": camera.getTransforms().add(new Translate(10,0,0)); break;
-               case "s": camera.getTransforms().add(new Translate(0,-10,0)); break;
-               case "d": camera.getTransforms().add(new Translate(-10,0,0)); break;
-           }
-        }));
+            switch(event.getText()){
+                case "w": n.getTransforms().add(new Rotate(-1, Rotate.X_AXIS)); break;
+                case "s": n.getTransforms().add(new Rotate(1, Rotate.X_AXIS)); break;
+                case "q": n.getTransforms().add(new Rotate(-1, Rotate.Z_AXIS)); break;
+                case "e": n.getTransforms().add(new Rotate(1, Rotate.Z_AXIS)); break;
+                case "d": n.getTransforms().add(new Rotate(-1, Rotate.Y_AXIS)); break;
+                case "a": n.getTransforms().add(new Rotate(1, Rotate.Y_AXIS)); break;
 
-        Scene tempScene = new Scene(temp, screenSize.getWidth(), screenSize.getHeight()-80, true, SceneAntialiasing.DISABLED);
+            }
+        }));
+        Scene tempScene = new Scene(temp, screenSize.getWidth(), screenSize.getHeight()-80, true, SceneAntialiasing.BALANCED);
         this.addScene(tempScene);
     }
 }

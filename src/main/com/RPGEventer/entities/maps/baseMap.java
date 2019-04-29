@@ -49,13 +49,16 @@ public class baseMap implements displayable {
     @Override
     public Node nodeToDisplay() {
         root = new Group();
-        for(int i=0; i<1; i++){
-            for(int j=0; j<1; j++){
+        for(int i=0; i<2; i++){
+            for(int j=0; j<2; j++){
                 MeshView meshView = loadMeshViews();
-                meshView.scaleXProperty().set(23);
+                meshView.scaleXProperty().set(10);
                 meshView.scaleYProperty().set(10);
-                meshView.scaleZProperty().set(20);
-
+                meshView.scaleZProperty().set(10);
+                Double x, y;
+                x = meshView.getBoundsInLocal().getWidth();
+                y = meshView.getBoundsInLocal().getHeight();
+                meshView.getTransforms().add(new Translate(i*x, j*y, 0));
                 root.getChildren().add(meshView);
             }
         }

@@ -38,7 +38,7 @@ public class baseMap implements displayable {
         this.myNode=nodeToDisplay();
     }
     public MeshView loadMeshViews() {
-        File file = new File("C:\\Users\\zachs\\IdeaProjects\\RPGEventer\\src\\resources\\stlFiles\\tester.stl");
+        File file = new File("C:\\Users\\zachs\\IdeaProjects\\RPGEventer\\src\\resources\\stlFiles\\tester.stl"); //Force everyone to change their user name to zachs mwuahahahaha
         StlMeshImporter importer = new StlMeshImporter();
         importer.read(file);
         Mesh mesh = importer.getImport();

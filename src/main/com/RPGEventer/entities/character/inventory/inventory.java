@@ -13,8 +13,7 @@ import java.util.Vector;
 public class inventory implements displayable {
         private final Vector<baseItem> itemsInInventory;
 
-        //TODO
-        //Add lots of bullshit here
+
         public inventory(Integer size){
                 itemsInInventory = new Vector<>(size);
         }
@@ -24,15 +23,26 @@ public class inventory implements displayable {
                 //Set up node that displays inventory
                 AnchorPane root = new AnchorPane();
                 GridPane inventoryDisplay = new GridPane();
-                //TODO:
-                // Based on inventory size
-                inventoryDisplay.addColumn(0, itemsInInventory.elementAt(0).nodeToDisplay());
-                inventoryDisplay.addColumn(1);
-                inventoryDisplay.addRow(0);
-                inventoryDisplay.addRow(1);
+
+
+                // TODO:
+                //  This loop needs tested
+                int invMod = 4;
+                int temp = itemsInInventory.size();
+                int numRows = 1;
+                while(temp-invMod>=0){
+                        numRows++;
+                        temp -= invMod;
+                }
+
+                for(int i=0; i<numRows; i++){
+                        inventoryDisplay.addRow(i);
+                }
+
                 root.getChildren().add(inventoryDisplay);
                 return root;
         }
+
 
         @Override
         public void removeFromScene() {

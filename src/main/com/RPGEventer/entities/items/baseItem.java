@@ -29,36 +29,45 @@ public class baseItem implements inventoriable, displayable, interactable {
 
     @Override
     public boolean addItemToInventory(baseItem itemToAdd, baseCharacter characterToAddItemTo) {
-        return false;
+        if(characterToAddItemTo == null || itemToAdd == null) { System.out.println("Could NOT add " + itemToAdd + " to your inventory!"); return false; }
+        else { System.out.println(itemToAdd + " has been added to your inventory!"); return true;}
     }
 
     @Override
     public boolean removeItemFromInventory(baseItem itemToRemove, baseCharacter characterToRemoveItemFrom) {
-        return false;
+        if(characterToRemoveItemFrom == null || itemToRemove == null) { System.out.println( itemToRemove + " is NOT in your inventory!"); return false; }
+        else { System.out.println(itemToRemove + " has been removed from your inventory!"); return true;}
+
     }
 
     @Override
     public boolean useItem(baseItem itemToUse, baseCharacter characterUsingItem) {
-        return false;
+        if(characterUsingItem == null || itemToUse == null) { System.out.println( "I can NOT use " + itemToUse +"!"); return false; }
+        else { System.out.println("ermagawd, im using: " + itemToUse); return true;}
     }
 
     @Override
     public boolean interact(baseCharacter char1, baseCharacter char2) {
-        return false;
+        if(char1 == null || char2 == null) { System.out.println( "There is no one here, stupid!"); return false; }
+        else { System.out.println("Sup dawg, trade shit?"); return true;}
+
     }
 
     @Override
     public boolean interact(baseCharacter char1, baseItem item) {
-        return false;
+        if(char1 == null || item == null) { System.out.println( "I have no idea what im doing"); return false; }
+        else { System.out.println("Wait, did something just happen?!"); return true;}
     }
 
     @Override
     public boolean interact(baseItem item, baseMap map) {
-        return false;
+        if(item == null || map == null) { System.out.println( "Flux capacitor is broken."); return false; }
+        else { System.out.println("Im doing a thing!"); return true;}
     }
 
     @Override
     public boolean interact(baseCharacter char1, baseMap map) {
-        return false;
+        if(char1 == null || map == null) { System.out.println( "The cake is a lie"); return false; }
+        else { System.out.println("Im eating the cake."); return true;}
     }
 }

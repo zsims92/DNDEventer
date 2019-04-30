@@ -5,6 +5,9 @@ import java.util.Enumeration;
 
 public class databaseMain {
 
+    // TODO:
+    //  If we are still using this shit, it needs to have the driver initiated first, then everything should be fine.
+
     private Statement myStmt;
 
     public void initConnection(String serverIP, String databaseName, String userName, String passWord, String port){

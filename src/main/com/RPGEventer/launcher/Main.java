@@ -11,6 +11,6 @@ public class Main {
         LOGGER.info("Loading the resource bundle for localization");
         textBundle = ResourceBundle.getBundle("resources.localization.textBundle");
         launcher launch = new launcher();
-        launch.run();
+        launch.run();  //launch.fuckYouSims()
     }
 }

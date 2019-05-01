@@ -1,23 +1,14 @@
 package main.com.RPGEventer.entities.maps;
 
 import com.interactivemesh.jfx.importer.stl.StlMeshImporter;
-import javafx.scene.AmbientLight;
+import javafx.geometry.Point3D;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.PointLight;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.*;
-import javafx.scene.transform.Rotate;
 import javafx.scene.transform.Translate;
 import main.com.RPGEventer.interfaces.displayable;
-
-import java.awt.*;
 import java.io.File;
 
 public class baseMap implements displayable {
@@ -27,6 +18,7 @@ public class baseMap implements displayable {
     private static final double MODEL_X_OFFSET = 0; // standard
     private static final double MODEL_Y_OFFSET = 0; // standard
     private static final int VIEWPORT_SIZE = 1920;
+    public Point3D center = new Point3D(0,0,0);
 
     public Node getMyNode() {
         return myNode;
@@ -44,24 +36,28 @@ public class baseMap implements displayable {
         Mesh mesh = importer.getImport();
         return new MeshView(mesh);
     }
-
-    private Group root;
     @Override
     public Node nodeToDisplay() {
-        root = new Group();
-        for(int i=0; i<2; i++){
-            for(int j=0; j<2; j++){
+        Group root = new Group();
+        double x=0.0, y = 0.0;
+        for(int i=0; i<10; i++){
+            for(int j=0; j<10; j++){
                 MeshView meshView = loadMeshViews();
                 meshView.scaleXProperty().set(10);
                 meshView.scaleYProperty().set(10);
                 meshView.scaleZProperty().set(10);
-                Double x, y;
                 x = meshView.getBoundsInLocal().getWidth();
                 y = meshView.getBoundsInLocal().getHeight();
-                meshView.getTransforms().add(new Translate(i*x, j*y, 0));
+                System.out.println((i*x-100.0) + " " + (y*j-100.0) + " 0.0");
+                meshView.getTransforms().add(new Translate(i*x-100.0, j*y-100.0, 0));
                 root.getChildren().add(meshView);
             }
         }
+        PointLight pl  = new PointLight();
+        pl.setTranslateZ(-4000);
+        pl.setColor(new Color(.4,0,0,1.0));
+        root.getChildren().add(pl);
+        this.center = new Point3D(x*5, y*5, 0);
         this.myNode=root;
         return root;
     }

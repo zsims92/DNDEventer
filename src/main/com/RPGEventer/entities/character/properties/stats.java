@@ -9,4 +9,17 @@ public class stats {
     private Integer hitpointsMax = 100;
     private Integer getHitpointsCurrent = 100;
 
+    // TODO:
+    //  decide if you want these incorporated at all
+    /* 6 main stats that D&D actually use:
+
+    private Integer strength;
+    private Integer constitution;
+    private Integer dexterity;
+    private Integer intelligence;
+    private Integer wisdom;
+    private Integer charisma;
+
+    */
+
 }

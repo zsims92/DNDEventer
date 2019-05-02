@@ -23,8 +23,7 @@ public class baseTile implements displayable{
         //TODO:
         // Forgot about this guy.
         // Also this is some shit that needs fixed
-
-        //also also fuck you sims
+        // Also also fuck you sims
 
         root.getChildren().add(squareMonster);
         return root;

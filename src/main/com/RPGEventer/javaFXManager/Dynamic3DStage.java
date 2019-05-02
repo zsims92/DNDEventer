@@ -12,7 +12,7 @@ import java.util.Vector;
 
 import static main.com.RPGEventer.launcher.launcher.manager;
 
-public class Dynamic3DStage extends Stage{
+public abstract class Dynamic3DStage extends Stage{
     public String STAGE_ID;
     public Vector<String> SCENE_IDS;
     public Vector<String> SCENE_FILES;

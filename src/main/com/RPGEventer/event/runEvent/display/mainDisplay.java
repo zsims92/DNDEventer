@@ -1,16 +1,11 @@
 package main.com.RPGEventer.event.runEvent.display;
 
-import com.interactivemesh.jfx.importer.stl.StlMeshImporter;
-import javafx.event.ActionEvent;
-import javafx.geometry.Point3D;
+import com.sun.scenario.effect.light.PointLight;
 import javafx.scene.*;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.transform.Rotate;
 import javafx.scene.transform.Translate;
-import jdk.jfr.EventType;
 import main.com.RPGEventer.entities.maps.baseMap;
 import main.com.RPGEventer.javaFXManager.Dynamic3DStage;
 
@@ -72,7 +67,6 @@ public class mainDisplay extends Dynamic3DStage {
         }));
 
         Scene tempScene = new Scene(mainGroup, screenSize.getWidth(), screenSize.getHeight()-80, true, SceneAntialiasing.BALANCED);
-        tempScene.setFill(new Color(0,0,1.0, 1.0));
 
         this.addScene(tempScene);
     }

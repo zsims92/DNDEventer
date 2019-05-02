@@ -1,26 +1,12 @@
 package main.com.RPGEventer.launcher;
 
 import javafx.application.Application;
-import javafx.event.Event;
-import javafx.event.EventHandler;
-import javafx.event.EventType;
-import javafx.scene.*;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.shape.Box;
-import javafx.scene.shape.Shape3D;
-import javafx.scene.transform.Rotate;
-import javafx.scene.transform.Translate;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
-import main.com.RPGEventer.entities.character.baseCharacter;
-import main.com.RPGEventer.entities.character.monster.baseMonster;
-import main.com.RPGEventer.entities.character.playerCharacter.basePlayerCharacter;
 import main.com.RPGEventer.javaFXManager.fxManager;
+
 import java.awt.*;
-import java.awt.event.ActionListener;
-import java.awt.event.InputEvent;
-import java.awt.event.MouseEvent;
 
 import static main.com.RPGEventer.launcher.Main.textBundle;
 

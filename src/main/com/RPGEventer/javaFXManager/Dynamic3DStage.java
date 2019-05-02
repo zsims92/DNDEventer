@@ -1,13 +1,10 @@
 package main.com.RPGEventer.javaFXManager;
 
-import javafx.scene.Parent;
 import javafx.scene.PerspectiveCamera;
 import javafx.scene.Scene;
-import javafx.scene.SubScene;
 import javafx.stage.Stage;
 import main.com.RPGEventer.launcher.launcher;
 
-import java.awt.*;
 import java.util.Vector;
 
 import static main.com.RPGEventer.launcher.launcher.manager;

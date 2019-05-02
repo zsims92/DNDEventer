@@ -1,6 +1,5 @@
 package main.com.RPGEventer.launcher.javaFX.controllers;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import main.com.RPGEventer.editor.editorGui;
@@ -8,7 +7,6 @@ import main.com.RPGEventer.event.runEvent.display.mainDisplay;
 
 import static main.com.RPGEventer.launcher.Main.LOGGER;
 import static main.com.RPGEventer.launcher.Main.textBundle;
-import static main.com.RPGEventer.launcher.launcher.manager;
 
 public class launcherController {
 

@@ -1,33 +1,49 @@
 package main.com.RPGEventer.entities.tiles;
 
-import javafx.event.Event;
+import com.interactivemesh.jfx.importer.col.ColModelImporter;
+import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import main.com.RPGEventer.entities.status.statusEffect;
 import main.com.RPGEventer.interfaces.displayable;
 
-import java.awt.event.ActionEvent;
+import java.io.File;
+import java.util.Random;
 
 public class baseTile implements displayable{
+    private Node displayNode;
+
+    public Group getMesh() {
+        return mesh;
+    }
+
+    private Group mesh;
+    private String name;
+    private statusEffect effect;
+    private boolean[][] activeSubParts;
+
+    /***
+     *
+     * @param mesh The 3d tile display
+     * @param name A name for the tile
+     */
+    public baseTile(Group mesh, String name, statusEffect effect, boolean[][] activeSubParts){
+        this.mesh= mesh;
+        this.displayNode = nodeToDisplay();
+        this.activeSubParts = activeSubParts;
+    }
+
     @Override
     public void update() {
-
     }
 
 
     @Override
     public Node nodeToDisplay() {
-        //Set up node that displays monsters
-        AnchorPane root = new AnchorPane();
-        GridPane squareMonster = new GridPane();
-        //TODO:
-        // Forgot about this guy.
-        // Also this is some shit that needs fixed
-        // Also also fuck you sims
-
-        root.getChildren().add(squareMonster);
+        Group root=null;
+        root.getChildren().add(mesh);
         return root;
-
     }
 
     @Override
